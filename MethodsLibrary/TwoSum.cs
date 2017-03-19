@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MethodsLibrary
 {
     public static class TwoSum
     {
+        /// <summary>
+        /// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+        /// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+        /// </summary>
+        /// <param name="nums"> Array of integers </param>
+        /// <param name="target"> Target value as the sum of two numbers in the array </param>
+        /// <returns> Array of indices of the two numbers such that they add up to the target </returns>
         public static int[] twoSum(int[] nums, int target)
         {
             if (nums == null || nums.Length == 0)
