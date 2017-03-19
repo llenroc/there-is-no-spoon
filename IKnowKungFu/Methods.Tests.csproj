@@ -50,8 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TwoSumSolution.cs" />
+    <Compile Include="Inputs.cs" />
+    <Compile Include="Tests\TwoSumTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MethodsLibrary\MethodsLibrary.csproj">
+      <Project>{1d574e68-d46a-436c-87f6-ea8a561c5f28}</Project>
+      <Name>MethodsLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
