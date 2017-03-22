@@ -1,5 +1,5 @@
 ﻿
-namespace IKnowKungFu
+namespace Methods.Tests.Objects
 {
     /// <summary>
     /// Define different inputs for testing
@@ -36,6 +36,11 @@ namespace IKnowKungFu
         /// Gets or sets a int type output for testing
         /// </summary>
         public int OutputInt { set; get; }
+
+        /// <summary>
+        /// Gets or sets value for singly-linked list
+        /// </summary>
+        public ListNode ListNode { set; get; }
 
 
     }

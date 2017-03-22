@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MethodsLibrary
+namespace MethodsLibrary.Methods
 {
     public static class TwoSum
     {
