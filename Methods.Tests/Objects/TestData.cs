@@ -1,4 +1,5 @@
-﻿
+﻿using MethodsLibrary.Objects;
+
 namespace Methods.Tests.Objects
 {
     /// <summary>
@@ -38,10 +39,14 @@ namespace Methods.Tests.Objects
         public int OutputInt { set; get; }
 
         /// <summary>
-        /// Gets or sets value for singly-linked list
+        /// Gets or sets value for singly-linked list input
         /// </summary>
-        public ListNode ListNode { set; get; }
+        public ListNode InputListNode { set; get; }
 
+        /// <summary>
+        /// Gets or sets value for singly-linked list output
+        /// </summary>
+        public ListNode OutputListNode { set; get; }
 
     }
 }

@@ -26,8 +26,9 @@ namespace MethodsLibrary.Methods
                 return l1;
             }
 
+            ListNode resultNode = new ListNode();
             ListNode calNode = new ListNode();
-            ListNode resultNode = calNode;
+            resultNode.Next = calNode;
             int jinWei = 0;
 
             while ((l1 != null) && (l2 != null))

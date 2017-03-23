@@ -55,6 +55,7 @@
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\TwoSumTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TryItHere.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MethodsLibrary\MethodsLibrary.csproj">
