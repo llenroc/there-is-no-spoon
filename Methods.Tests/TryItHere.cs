@@ -15,25 +15,16 @@ namespace Methods.Tests
         public void tryItHere()
         {
             
-            ListNode inputListNode = new ListNode();
-            TestData testData = new TestData
-            {
-                InputListNode = inputListNode
-            };
-            //ListNode head = inputListNode;
-            int[] data = new[] {1, 2, 3};
-            foreach (var number in data)
-            {
-                inputListNode.Next = new ListNode(number);
-                inputListNode = inputListNode.Next;
-            }
+            TestData testData = new TestData();
+            ListNode head = testData.InputList(new int?[] {});
 
             //inputListNode.Next = new[] { 1, 2, 3, }.Select(i => new ListNode(i)).First();
-            while (testData.InputListNode.Next != null)
+            while (head != null)
             {
-                Console.WriteLine(testData.InputListNode.Next.Val + ", ");
-                testData.InputListNode = testData.InputListNode.Next;
+                Console.WriteLine(head.Val + ", ");
+                head = head.Next;
             }
+            Console.WriteLine("it's a null list");
         }
     }
 }

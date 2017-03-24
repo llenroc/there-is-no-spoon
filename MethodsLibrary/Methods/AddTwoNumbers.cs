@@ -12,9 +12,9 @@ namespace MethodsLibrary.Methods
         /// Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
         /// Output: 7 -> 0 -> 8
         /// </summary>
-        /// <param name="l1"></param>
-        /// <param name="l2"></param>
-        /// <returns></returns>
+        /// <param name="l1"> Head of a non-empty linked list representing a non-negative integer </param>
+        /// <param name="l2"> Head of a non-empty linked list representing a non-negative integer </param>
+        /// <returns> Head of result list </returns>
         public ListNode addTwoNumbers(ListNode l1, ListNode l2)
         {
             if (l1 == null)

@@ -1,4 +1,6 @@
-﻿using MethodsLibrary.Objects;
+﻿using System.Collections;
+using System.Collections.Generic;
+using MethodsLibrary.Objects;
 
 namespace Methods.Tests.Objects
 {
@@ -8,6 +10,16 @@ namespace Methods.Tests.Objects
     /// </summary>
     public class TestData
     {
+
+        //private IList dataList; 
+
+        //public TestData() { }
+
+        //public string[] DataString(string[] strings)
+        //{
+        //    this.dataList = new List<string>();
+        //}
+
         /// <summary>
         /// Gets or sets a string type input for testing
         /// </summary>
@@ -47,6 +59,54 @@ namespace Methods.Tests.Objects
         /// Gets or sets value for singly-linked list output
         /// </summary>
         public ListNode OutputListNode { set; get; }
+
+
+        /// <summary>
+        /// Initialized values for input list from a given array (nullable)
+        /// </summary>
+        /// <param name="arrayInts"> Nullable input array </param>
+        /// <returns> The head of the input list </returns>
+        public ListNode InputList(int?[] arrayInts)
+        {
+            if (arrayInts == null)
+            {
+                return null;
+            }
+
+            ListNode initializeListNode = new ListNode();
+            ListNode head = initializeListNode;
+
+            foreach (int number in arrayInts)
+            {
+                initializeListNode.Next = new ListNode(number);
+                initializeListNode = initializeListNode.Next;
+            }
+            return head.Next;
+        }
+
+        /// <summary>
+        /// Initialized values for output list from a given array (nullable)
+        /// </summary>
+        /// <param name="arrayInts"> Nullable output array </param>
+        /// <returns> The head of the output list </returns>
+        public ListNode OutputList(int?[] arrayInts)
+        {
+            if (arrayInts == null)
+            {
+                return null;
+            }
+
+            ListNode initializeListNode = new ListNode();
+            ListNode head = initializeListNode;
+
+            foreach (int number in arrayInts)
+            {
+                initializeListNode.Next = new ListNode(number);
+                initializeListNode = initializeListNode.Next;
+            }
+            return head.Next;
+        }
+
 
     }
 }

@@ -7,10 +7,7 @@
 
         public ListNode(int x) { Val = x; }
 
-        public ListNode()
-        {
-
-        }
+        public ListNode() { }
 
     }
 }
