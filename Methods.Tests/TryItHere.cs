@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MethodsLibrary.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Methods.Tests.Objects;
 
 namespace Methods.Tests
 {
@@ -13,9 +14,13 @@ namespace Methods.Tests
         [TestMethod]
         public void tryItHere()
         {
-
+            
             ListNode inputListNode = new ListNode();
-            ListNode head = inputListNode;
+            TestData testData = new TestData
+            {
+                InputListNode = inputListNode
+            };
+            //ListNode head = inputListNode;
             int[] data = new[] {1, 2, 3};
             foreach (var number in data)
             {
@@ -24,10 +29,10 @@ namespace Methods.Tests
             }
 
             //inputListNode.Next = new[] { 1, 2, 3, }.Select(i => new ListNode(i)).First();
-            while (head.Next != null)
+            while (testData.InputListNode.Next != null)
             {
-                Console.WriteLine(head.Next.Val + ", ");
-                head = head.Next;
+                Console.WriteLine(testData.InputListNode.Next.Val + ", ");
+                testData.InputListNode = testData.InputListNode.Next;
             }
         }
     }
