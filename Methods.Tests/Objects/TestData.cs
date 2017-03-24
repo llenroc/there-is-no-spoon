@@ -10,16 +10,6 @@ namespace Methods.Tests.Objects
     /// </summary>
     public class TestData
     {
-
-        //private IList dataList; 
-
-        //public TestData() { }
-
-        //public string[] DataString(string[] strings)
-        //{
-        //    this.dataList = new List<string>();
-        //}
-
         /// <summary>
         /// Gets or sets a string type input for testing
         /// </summary>
@@ -60,13 +50,14 @@ namespace Methods.Tests.Objects
         /// </summary>
         public ListNode OutputListNode { set; get; }
 
+        private IList DataList;
 
         /// <summary>
-        /// Initialized values for input list from a given array (nullable)
+        /// Initialized values for list from a given array (nullable)
         /// </summary>
         /// <param name="arrayInts"> Nullable input array </param>
-        /// <returns> The head of the input list </returns>
-        public ListNode InputList(int?[] arrayInts)
+        /// <returns> The head of the list </returns>
+        public static  ListNode InitializeList(int?[] arrayInts)
         {
             if (arrayInts == null)
             {
@@ -74,16 +65,17 @@ namespace Methods.Tests.Objects
             }
 
             ListNode initializeListNode = new ListNode();
-            ListNode head = initializeListNode;
+            ListNode headNode = initializeListNode;
 
             foreach (int number in arrayInts)
             {
                 initializeListNode.Next = new ListNode(number);
                 initializeListNode = initializeListNode.Next;
             }
-            return head.Next;
+            return headNode.Next;
         }
 
+        /*
         /// <summary>
         /// Initialized values for output list from a given array (nullable)
         /// </summary>
@@ -106,7 +98,7 @@ namespace Methods.Tests.Objects
             }
             return head.Next;
         }
-
+        */
 
     }
 }

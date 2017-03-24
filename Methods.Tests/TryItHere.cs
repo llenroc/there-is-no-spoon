@@ -16,7 +16,7 @@ namespace Methods.Tests
         {
             
             TestData testData = new TestData();
-            ListNode head = testData.InputList(new int?[] {});
+            ListNode head = testData.InitializeList(new int?[] {});
 
             //inputListNode.Next = new[] { 1, 2, 3, }.Select(i => new ListNode(i)).First();
             while (head != null)
