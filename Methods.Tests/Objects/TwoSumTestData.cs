@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using MethodsLibrary.Objects;
 
 namespace Methods.Tests.Objects
@@ -8,7 +7,7 @@ namespace Methods.Tests.Objects
     /// Define different inputs for testing
     /// contains different data structures 
     /// </summary>
-    public class TestData
+    public class TwoSumTestData
     {
         /// <summary>
         /// Gets or sets a string type input for testing
@@ -49,9 +48,7 @@ namespace Methods.Tests.Objects
         /// Gets or sets value for singly-linked list output
         /// </summary>
         public ListNode OutputListNode { set; get; }
-
-        private IList DataList;
-
+        
         /// <summary>
         /// Initialized values for list from a given array (nullable)
         /// </summary>
@@ -74,31 +71,5 @@ namespace Methods.Tests.Objects
             }
             return headNode.Next;
         }
-
-        /*
-        /// <summary>
-        /// Initialized values for output list from a given array (nullable)
-        /// </summary>
-        /// <param name="arrayInts"> Nullable output array </param>
-        /// <returns> The head of the output list </returns>
-        public ListNode OutputList(int?[] arrayInts)
-        {
-            if (arrayInts == null)
-            {
-                return null;
-            }
-
-            ListNode initializeListNode = new ListNode();
-            ListNode head = initializeListNode;
-
-            foreach (int number in arrayInts)
-            {
-                initializeListNode.Next = new ListNode(number);
-                initializeListNode = initializeListNode.Next;
-            }
-            return head.Next;
-        }
-        */
-
     }
 }

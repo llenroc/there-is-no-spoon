@@ -15,7 +15,7 @@ namespace Methods.Tests
         public void tryItHere()
         {
             
-            TestData testData = new TestData();
+            AddTwoNumbersTestData testData = new AddTwoNumbersTestData();
             ListNode head = testData.InitializeList(new int?[] {});
 
             //inputListNode.Next = new[] { 1, 2, 3, }.Select(i => new ListNode(i)).First();
