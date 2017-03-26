@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
+    <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
     <Compile Include="Objects\TwoSumTestData.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\TwoSumTest.cs" />

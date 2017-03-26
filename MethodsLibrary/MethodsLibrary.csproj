@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Methods\AddTwoNumbers.cs" />
+    <Compile Include="Methods\LengthOfLongestSubstring.cs" />
     <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Methods\TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
