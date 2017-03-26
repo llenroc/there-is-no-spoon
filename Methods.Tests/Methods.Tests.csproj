@@ -51,7 +51,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
-    <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Objects\TwoSumTestData.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\TwoSumTest.cs" />

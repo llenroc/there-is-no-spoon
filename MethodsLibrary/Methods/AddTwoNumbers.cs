@@ -15,44 +15,33 @@ namespace MethodsLibrary.Methods
         /// <param name="l1"> Head of a non-empty linked list representing a non-negative integer </param>
         /// <param name="l2"> Head of a non-empty linked list representing a non-negative integer </param>
         /// <returns> Head of result list </returns>
-        public ListNode addTwoNumbers(ListNode l1, ListNode l2)
+        public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
         {
-            if (l1 == null)
-            {
-                return l2;
-            }
-            if (l2 == null)
-            {
-                return l1;
-            }
-
-            ListNode resultNode = new ListNode();
-            ListNode calNode = new ListNode();
-            resultNode.Next = calNode;
+            ListNode calNode = new ListNode(0);
+            ListNode resultNode= calNode;
             int jinWei = 0;
 
-            while ((l1 != null) && (l2 != null))
+            while ((l1 != null) || (l2 != null))
             {
-                calNode.Val = l1.Val + l2.Val + jinWei;
-                jinWei = jinWei % 10;
-                calNode.Next = new ListNode();
-                calNode = calNode.Next;
-                l1 = l1.Next;
-                l2 = l2.Next;
+                jinWei /= 10;
+                if (l1 != null)
+                {
+                    jinWei += l1.val;
+                    l1 = l1.next;
+                }
+                if (l2 != null)
+                {
+                    jinWei += l2.val;
+                    l2 = l2.next;
+                }
+                calNode.next = new ListNode(jinWei % 10);
+                calNode = calNode.next;
             }
-
-            if (l1 == null)
+            if ((jinWei / 10) == 1)
             {
-                calNode.Val = jinWei + l2.Val;
-                return resultNode.Next;
+                calNode.next = new ListNode(1);
             }
-
-            if (l2 == null)
-            {
-                calNode.Val = jinWei + l1.Val;
-                return resultNode.Next;
-            }
-            return resultNode.Next;
+            return resultNode.next;
         }
     }
 }

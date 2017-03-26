@@ -21,30 +21,54 @@ namespace Methods.Tests.Tests
         [TestInitialize]
         public void SetUp()
         {
-            TestDataList = new List<AddTwoNumbersTestData>();
+            AddTwoNumbersTestData testData1 = new AddTwoNumbersTestData();
+            testData1.InputListNode1 = testData1.InitializeList(new int?[] {2, 4, 3});
+            testData1.InputListNode2 = testData1.InitializeList(new int?[] {5, 6, 4});
+            testData1.InputListNode3 = testData1.InitializeList(new int?[] {7, 0, 8});
 
-            //{
-            //    new AddTwoNumbersTestData()
-            //    {
-            //        InputListNode1 =  InitializeList1( new[] {2, 4, 3}),
-            //        InputListNode2 =  InitializeList1( new[] {5, 6, 4}),
-            //        InputListNode2 =  InitializeList1( new[] {7, 0, 8}),
-            //    }
-            //};
+            AddTwoNumbersTestData testData2 = new AddTwoNumbersTestData();
+            testData2.InputListNode1 = testData2.InitializeList(new int?[] {2, 4, 3});
+            testData2.InputListNode2 = testData2.InitializeList(new int?[] {});
+            testData2.InputListNode3 = testData2.InitializeList(new int?[] {2, 4, 3});
 
+            AddTwoNumbersTestData testData3 = new AddTwoNumbersTestData();
+            testData3.InputListNode1 = testData3.InitializeList(new int?[] {2, 4, 3});
+            testData3.InputListNode2 = testData3.InitializeList(new int?[] {4, 6});
+            testData3.InputListNode3 = testData3.InitializeList(new int?[] {6, 0, 4});
+
+            TestDataList = new List<AddTwoNumbersTestData>
+            {
+                testData1,
+                testData2,
+                testData3
+            };
         }
-
 
         [TestMethod]
         public void addTwoNumbersTest()
         {
-            System.Console.WriteLine(TestDataList);
+            foreach (AddTwoNumbersTestData testData in TestDataList)
+            {
+                ListNode resultNode = AddTwoNumbers.addTwoNumbers(testData.InputListNode1, testData.InputListNode2);
+                ListNode expectedResult = testData.InputListNode3;
+                while ((resultNode != null) && (expectedResult != null))
+                {
+                    Console.WriteLine("result is " + resultNode.val + ", expected result is " + expectedResult.val);
+                    Assert.AreEqual(resultNode.val, expectedResult.val, "Test failed");
+                    resultNode = resultNode.next;
+                    expectedResult = expectedResult.next;
+                }
+                if (resultNode != null)
+                {
+                    Assert.Fail("Failed on extra node " + resultNode.val);
+                }
+                if (expectedResult != null)
+                {
+                    Assert.Fail("Failed on extra node " + expectedResult.val);
 
-            //foreach (TwoSumTestData testData in TestDataList)
-            //{
-            //    //CollectionAssert.AreEqual(AddTwoNumbers.addTwoNumbers(testData.InputArrayInt, testData.InputInt), testData.OutputArrayInt);
-            //}
-
+                }
+                Console.WriteLine("************************************");
+            }
         }
     }
 }

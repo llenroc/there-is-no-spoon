@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using MethodsLibrary.Objects;
+﻿using MethodsLibrary.Objects;
 
 namespace Methods.Tests.Objects
 {
@@ -48,28 +47,28 @@ namespace Methods.Tests.Objects
         /// Gets or sets value for singly-linked list output
         /// </summary>
         public ListNode OutputListNode { set; get; }
-        
+
         /// <summary>
         /// Initialized values for list from a given array (nullable)
         /// </summary>
         /// <param name="arrayInts"> Nullable input array </param>
         /// <returns> The head of the list </returns>
-        public static  ListNode InitializeList(int?[] arrayInts)
+        public static ListNode InitializeList(int?[] arrayInts)
         {
             if (arrayInts == null)
             {
                 return null;
             }
 
-            ListNode initializeListNode = new ListNode();
+            ListNode initializeListNode = new ListNode(0);
             ListNode headNode = initializeListNode;
 
             foreach (int number in arrayInts)
             {
-                initializeListNode.Next = new ListNode(number);
-                initializeListNode = initializeListNode.Next;
+                initializeListNode.next = new ListNode(number);
+                initializeListNode = initializeListNode.next;
             }
-            return headNode.Next;
+            return headNode.next;
         }
     }
 }
