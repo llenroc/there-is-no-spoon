@@ -14,17 +14,11 @@ namespace Methods.Tests
         [TestMethod]
         public void tryItHere()
         {
-            
-            AddTwoNumbersTestData testData = new AddTwoNumbersTestData();
-            //ListNode head = testData.InitializeList(new int?[] {});
+            Assert.Fail("La Ji!");
+            Assert.AreEqual(1, 1, "test 1 failed");
+            Assert.AreEqual(1, 4, "test 3 failed");
+            Assert.Inconclusive("test 2 failed");
 
-            //inputListNode.next = new[] { 1, 2, 3, }.Select(i => new ListNode(i)).First();
-            //while (head != null)
-            //{
-            //    Console.WriteLine(head.val + ", ");
-            //    head = head.next;
-            //}
-            //Console.WriteLine("it's a null list");
         }
     }
 }

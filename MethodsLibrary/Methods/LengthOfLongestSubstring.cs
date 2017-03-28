@@ -10,11 +10,12 @@ namespace MethodsLibrary.Methods
     {
         public int lengthOfLongestSubstring(string s)
         {
-            int result = 0;
+            if (s == null) return 0;
+            int length = 0;
 
 
 
-            return result;
+            return length;
         }
     }
 }
