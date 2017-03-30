@@ -14,10 +14,11 @@ namespace Methods.Tests
         [TestMethod]
         public void tryItHere()
         {
-            Assert.Fail("La Ji!");
-            Assert.AreEqual(1, 1, "test 1 failed");
-            Assert.AreEqual(1, 4, "test 3 failed");
-            Assert.Inconclusive("test 2 failed");
+            string s = "abcdefg";
+            for (int i=0; i<s.Length; i++)
+            {
+                Console.WriteLine(s[i]);
+            }
 
         }
     }

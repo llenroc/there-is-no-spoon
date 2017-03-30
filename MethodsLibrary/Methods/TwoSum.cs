@@ -29,7 +29,7 @@ namespace MethodsLibrary.Methods
                 }
                 else
                 {
-                    if (!dict.ContainsKey(nums[i]))
+                    if (!dict.ContainsKey(nums[i])) // C# Dictionary can't handle duplicate keys or null keys like HashMap in Java
                         dict.Add(nums[i], i);
                 }
             }
