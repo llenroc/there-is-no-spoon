@@ -52,9 +52,11 @@
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
+    <Compile Include="Objects\LongestPalindromeTestData.cs" />
     <Compile Include="Objects\TwoSumTestData.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
+    <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\TwoSumTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TryItHere.cs" />
