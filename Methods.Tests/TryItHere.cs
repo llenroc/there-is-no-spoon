@@ -4,6 +4,7 @@ using System.Linq;
 using MethodsLibrary.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Methods.Tests.Objects;
+using MethodsLibrary.Methods;
 
 namespace Methods.Tests
 {
@@ -14,11 +15,9 @@ namespace Methods.Tests
         [TestMethod]
         public void tryItHere()
         {
-            string s = "abcdefg";
-            for (int i=0; i<s.Length; i++)
-            {
-                Console.WriteLine(s[i]);
-            }
+            string s = "abca";
+            bool result = LongestPalindromeSubstring.IsPalindrome(s);
+            Console.WriteLine(result);
 
         }
     }
