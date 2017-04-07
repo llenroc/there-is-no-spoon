@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -27,6 +24,41 @@ namespace Methods.Tests.Tests
             {
                 new LongestPalindromeTestData
                 {
+                    InputString = "",
+                    OutputString = ""
+                },
+                new LongestPalindromeTestData
+                {
+                    InputString = "xx",
+                    OutputString = "xx"
+                },
+                new LongestPalindromeTestData
+                {
+                    InputString = "ab",
+                    OutputString = "a"
+                },
+                new LongestPalindromeTestData
+                {
+                    InputString = "xxxxa",
+                    OutputString = "xxxx"
+                },
+                new LongestPalindromeTestData
+                {
+                    InputString = "xxxxaxxs",
+                    OutputString = "xxaxx"
+                },
+                new LongestPalindromeTestData
+                {
+                    InputString = "x",
+                    OutputString = "x"
+                },
+                new LongestPalindromeTestData
+                {
+                    InputString = "abba",
+                    OutputString = "abba"
+                },
+                new LongestPalindromeTestData
+                {
                     InputString = "babad",
                     OutputString = "bab"
                 },
@@ -34,22 +66,13 @@ namespace Methods.Tests.Tests
                 {
                     InputString = "cbbd",
                     OutputString = "bb"
-                },
-                new LongestPalindromeTestData
-                {
-                    InputString = "",
-                    OutputString = ""
-                },
-                new LongestPalindromeTestData
-                {
-                    InputString = "",
-                    OutputString = ""
-                },
-                new LongestPalindromeTestData
-                {
-                    InputString = "",
-                    OutputString = ""
                 }
+                //,
+                //new LongestPalindromeTestData
+                //{
+                //    InputString = "zudfweormatjycujjirzjpyrmaxurectxrtqedmmgergwdvjmjtstdhcihacqnothgttgqfywcpgnuvwglvfiuxteopoyizgehkwuvvkqxbnufkcbodlhdmbqyghkojrgokpwdhtdrwmvdegwycecrgjvuexlguayzcammupgeskrvpthrmwqaqsdcgycdupykppiyhwzwcplivjnnvwhqkkxildtyjltklcokcrgqnnwzzeuqioyahqpuskkpbxhvzvqyhlegmoviogzwuiqahiouhnecjwysmtarjjdjqdrkljawzasriouuiqkcwwqsxifbndjmyprdozhwaoibpqrthpcjphgsfbeqrqqoqiqqdicvybzxhklehzzapbvcyleljawowluqgxxwlrymzojshlwkmzwpixgfjljkmwdtjeabgyrpbqyyykmoaqdambpkyyvukalbrzoyoufjqeftniddsfqnilxlplselqatdgjziphvrbokofvuerpsvqmzakbyzxtxvyanvjpfyvyiivqusfrsufjanmfibgrkwtiuoykiavpbqeyfsuteuxxjiyxvlvgmehycdvxdorpepmsinvmyzeqeiikajopqedyopirmhymozernxzaueljjrhcsofwyddkpnvcvzixdjknikyhzmstvbducjcoyoeoaqruuewclzqqqxzpgykrkygxnmlsrjudoaejxkipkgmcoqtxhelvsizgdwdyjwuumazxfstoaxeqqxoqezakdqjwpkrbldpcbbxexquqrznavcrprnydufsidakvrpuzgfisdxreldbqfizngtrilnbqboxwmwienlkmmiuifrvytukcqcpeqdwwucymgvyrektsnfijdcdoawbcwkkjkqwzffnuqituihjaklvthulmcjrhqcyzvekzqlxgddjoir",
+                //    OutputString = "bb"
+                //}
             };
         }
 
@@ -57,13 +80,15 @@ namespace Methods.Tests.Tests
         /// Test method to verify if the method works
         /// </summary>
         [TestMethod]
-        public void lengthOfLongestSubstringTest()
+        public void longestPalindromeTest()
         {
             foreach (LongestPalindromeTestData testData in TestDataList)
             {
-                Assert.AreEqual(LongestPalindromeSubstring.LongestPalindrome(testData.InputString), testData.OutputString, "Failed on the case: " + testData.InputString);
+                Console.WriteLine("Testing => Input: " + testData.InputString + "; Expected Output: " +
+                                  testData.OutputString);
+                Assert.AreEqual(LongestPalindromeSubstring.LongestPalindrome(testData.InputString),
+                                testData.OutputString, "Failed on the case: " + testData.InputString);
             }
         }
-
     }
 }
