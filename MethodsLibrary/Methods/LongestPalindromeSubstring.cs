@@ -18,13 +18,13 @@
 
             while (maxLength > 1)
             {
-                if (IsPalindromeRevised(s, maxIndex, maxIndex + maxLength - 1))
+                if (IsPalindromeRevised(s, maxIndex, (maxIndex + maxLength) - 1))
                 {
                     return s.Substring(maxIndex, maxLength);
                 }
                 while (maxIndex <= (s.Length - maxLength))
                 {
-                    if (IsPalindromeRevised(s, maxIndex, maxIndex + maxLength - 1))
+                    if (IsPalindromeRevised(s, maxIndex, (maxIndex + maxLength) - 1))
                     {
                         return s.Substring(maxIndex, maxLength);
                     }
@@ -81,6 +81,7 @@
 
             return s.Substring(maxIndex, maxLength);
         }
+
         public static bool IsPalindrome(string s)
         {
             if (string.IsNullOrEmpty(s))
