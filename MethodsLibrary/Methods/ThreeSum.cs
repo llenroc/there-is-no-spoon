@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MethodsLibrary.Methods
 {
@@ -17,17 +18,22 @@ namespace MethodsLibrary.Methods
             {
                 return null;
             }
-
+            Array.Sort(nums);
             IList<IList<int>> resultList = new List<IList<int>>();
 
             HashSet<int> set = new HashSet<int>();
 
             for (int index1 = 0; index1 < nums.Length; index1++)
             {
+                if (index1==0 || nums[index1] == nums[index1-1])
+                {
+                    continue;
+                }
                 int first = nums[index1];
                 for (int index2 = index1 + 1; index2 < nums.Length; index2++)
                 {
                     int second = nums[index2];
+                    
                     if (set.Contains(first - second))
                     {
                         IList<int> solutionList = new List<int>();
