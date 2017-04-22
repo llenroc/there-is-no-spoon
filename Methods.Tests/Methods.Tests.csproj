@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -55,6 +56,7 @@
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
     <Compile Include="Objects\ThreeSumTestData.cs" />
     <Compile Include="Objects\TwoSumTestData.cs" />
+    <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
     <Compile Include="Tests\LongestPalindromeTest.cs" />

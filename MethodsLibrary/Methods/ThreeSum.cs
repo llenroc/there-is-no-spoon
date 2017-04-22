@@ -18,18 +18,13 @@ namespace MethodsLibrary.Methods
             {
                 return null;
             }
-            Array.Sort(nums);
-            //Input: [-4, -1, -1, 0, 1, 2]
+            //Array.Sort(nums);
             IList<IList<int>> resultList = new List<IList<int>>();
 
             HashSet<int> set = new HashSet<int>();
 
-            for (int index1 = 0; index1 < (nums.Length - 2); index1++)
+            for (int index1 = 0; index1 < nums.Length-2; index1++)
             {
-                if ((index1 == 0) || (nums[index1] == nums[index1 - 1]))
-                {
-                    continue;
-                }
                 int first = nums[index1];
                 for (int index2 = index1 + 1; index2 < nums.Length; index2++)
                 {
@@ -41,6 +36,10 @@ namespace MethodsLibrary.Methods
                         solutionList.Add(first);
                         solutionList.Add(second);
                         solutionList.Add(first - second);
+                        //if (!resultList.Contains(solutionList))
+                        //{
+                        //    resultList.Add(solutionList);
+                        //}
                         resultList.Add(solutionList);
                     }
                     set.Add(second);

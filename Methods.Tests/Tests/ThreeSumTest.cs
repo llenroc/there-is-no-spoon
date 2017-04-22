@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections;
 
 namespace Methods.Tests.Tests
 {
@@ -42,14 +44,25 @@ namespace Methods.Tests.Tests
         [TestMethod]
         public void threeSumTest()
         {
-            foreach (ThreeSumTestData testData in TestDataList)
+            //foreach (ThreeSumTestData testData in TestDataList)
+            //{
+            //    Console.WriteLine("Testing => Input: [{0}]", string.Join(", ", testData.InputArray));
+            //    Console.WriteLine("Expected Output: " + string.Join(", ", testData.OutputList));
+            //    Console.WriteLine("Testing => Input: " + testData.InputArray + "; Output: " +
+            //                      ThreeSum.threeSum(testData.InputArray) + "; Expected Output: " + testData.OutputList);
+            //    Assert.AreEqual(ThreeSum.threeSum(testData.InputArray),
+            //                    testData.OutputList, "Failed on the case: " + testData.InputArray);
+            //}
+
+            IList<IList<int>> result = ThreeSum.threeSum(TestDataList[0].InputArray);
+
+            foreach (var a in result)
             {
-                Console.WriteLine("Testing => Input: [{0}]", string.Join(", ", testData.InputArray));
-                Console.WriteLine("Expected Output: " + string.Join(", ", testData.OutputList));
-                Console.WriteLine("Testing => Input: " + testData.InputArray + "; Output: " +
-                                  ThreeSum.threeSum(testData.InputArray) + "; Expected Output: " + testData.OutputList);
-                Assert.AreEqual(ThreeSum.threeSum(testData.InputArray),
-                                testData.OutputList, "Failed on the case: " + testData.InputArray);
+                foreach (var x in a)
+                {
+                    Console.Write(x + ", ");
+                }
+                Console.WriteLine();
             }
         }
     }
