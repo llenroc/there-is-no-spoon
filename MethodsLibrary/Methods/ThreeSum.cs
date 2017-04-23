@@ -18,35 +18,46 @@ namespace MethodsLibrary.Methods
             {
                 return null;
             }
-            //Array.Sort(nums);
+            Array.Sort(nums);
             IList<IList<int>> resultList = new List<IList<int>>();
-
-            HashSet<int> set = new HashSet<int>();
 
             for (int index1 = 0; index1 < nums.Length-2; index1++)
             {
-                int first = nums[index1];
-                for (int index2 = index1 + 1; index2 < nums.Length; index2++)
+                // Skip the same numbers
+                if(index1 > 0 && nums[index1] == nums[index1-1])
                 {
-                    int second = nums[index2];
-
-                    if (set.Contains(first - second))
-                    {
-                        IList<int> solutionList = new List<int>();
-                        solutionList.Add(first);
-                        solutionList.Add(second);
-                        solutionList.Add(first - second);
-                        //if (!resultList.Contains(solutionList))
-                        //{
-                        //    resultList.Add(solutionList);
-                        //}
-                        resultList.Add(solutionList);
-                    }
-                    set.Add(second);
+                    continue;
                 }
-                set.Clear();
-            }
+                int index2 = index1 + 1;
+                int index3 = nums.Length - 1;
+                while (index2 < index3)
+                {
+                    int first = nums[index1];
+                    int second = nums[index2];
+                    int third = nums[index3];
 
+                    if (first + second + third == 0)
+                    {
+                        IList<int> solution = new List<int>();
+                        solution.Add(first);
+                        solution.Add(second);
+                        solution.Add(third);
+                        resultList.Add(solution);
+                        index2++;
+                        index3--;
+                        while (index2 < index3 && nums[index2] == nums[index2 - 1]) index2++;  // skip same result
+                        while (index2 < index3 && nums[index3] == nums[index3 + 1]) index3--;  // skip same result
+                    }
+                    else if(first + second + third <0 )
+                    {
+                        index2++;
+                    }
+                    else
+                    {
+                        index3--;
+                    }
+                }
+            }            
             return resultList;
         }
     }
