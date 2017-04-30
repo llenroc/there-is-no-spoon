@@ -49,24 +49,15 @@ namespace Methods.Tests
                 }
             };
 
-            Console.WriteLine(list1[0]);
-            Console.WriteLine(list2[0]);
+            int i = 0;
+            while (list1.Count == list2.Count && i < list1.Count && i < list2.Count)
+            {
 
-            Assert.AreEqual(list1[0].ToString(), list2[0].ToString(), "卧槽你马勒个大笔！");
-
-
-            //int[] nums = new[] {-1, 0, 1, 2, -1, -4};
-            ////Array.Sort(nums);
-            ////Console.WriteLine("Testing => Input: [{0}]", string.Join(", ", nums));
-            //IList<IList<int>> result = ThreeSum.threeSum(nums);
-            //foreach (var smallerOnes in result)
-            //{
-            //    foreach (var items in smallerOnes)
-            //    {
-            //        Console.Write(items + " | ");
-            //    }
-            //    Console.WriteLine();
-            //}
+                
+                CollectionAssert.AreEqual((List<int>)list1[i], (List<int>)list2[i], "result sets are not equal");
+                i++;
+            }
+            
         }
     }
 }

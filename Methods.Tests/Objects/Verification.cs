@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Methods.Tests.Objects
@@ -8,6 +10,24 @@ namespace Methods.Tests.Objects
     /// </summary>
     public class Verification
     {
+        /// <summary>
+        ///     Method to check that two strings are equal.
+        /// </summary>
+        /// <param name="expected">Expected value.</param>
+        /// <param name="actual">Actual value.</param>
+        /// <param name="message">Message to display on failure.</param>
+        //public static void AssertEqual(IList expected, IList actual, string message)
+        //{
+        //    if (expected.Count != actual.Count)
+        //    {
+        //        AssertFail("The returned result set doesn't have the same number of results" + message);
+        //    }
+            
+
+
+        //}
+
+        /*
         /// <summary>
         ///     Method to check that two strings are equal.
         /// </summary>
@@ -340,6 +360,7 @@ namespace Methods.Tests.Objects
             Assert.Fail("Expected: " + op + " " + compareValue + " Actual: " + actual + ". " + message);
         }
 
+        */
         /// <summary>
         ///     Forces the test to fail
         /// </summary>

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections;
 
 namespace Methods.Tests.Tests
 {
@@ -30,9 +28,17 @@ namespace Methods.Tests.Tests
                     OutputList = new List<IList<int>>
                     {
                         new List<int>
-                        { -1, 0, 1 },
+                        {
+                            -1,
+                            -1,
+                            2
+                        },
                         new List<int>
-                        { -1, -1, 2 }
+                        {
+                            -1,
+                            0,
+                            1
+                        }
                     }
                 }
             };
@@ -44,25 +50,35 @@ namespace Methods.Tests.Tests
         [TestMethod]
         public void threeSumTest()
         {
-            //foreach (ThreeSumTestData testData in TestDataList)
-            //{
-            //    Console.WriteLine("Testing => Input: [{0}]", string.Join(", ", testData.InputArray));
-            //    Console.WriteLine("Expected Output: " + string.Join(", ", testData.OutputList));
-            //    Console.WriteLine("Testing => Input: " + testData.InputArray + "; Output: " +
-            //                      ThreeSum.threeSum(testData.InputArray) + "; Expected Output: " + testData.OutputList);
-            //    Assert.AreEqual(ThreeSum.threeSum(testData.InputArray),
-            //                    testData.OutputList, "Failed on the case: " + testData.InputArray);
-            //}
-
-            IList<IList<int>> result = ThreeSum.threeSum(TestDataList[0].InputArray);
-
-            foreach (var a in result)
+            foreach (ThreeSumTestData testData in TestDataList)
             {
-                foreach (var x in a)
+                Console.WriteLine("Testing => Input: [{0}]", string.Join(", ", testData.InputArray));
+
+
+                IList<IList<int>> result = ThreeSum.threeSum(testData.InputArray);
+
+                int i = 0;
+                while ((testData.OutputList.Count == result.Count) && (i < result.Count) && (i < testData.OutputList.Count))
                 {
-                    Console.Write(x + ", ");
+                    Console.WriteLine("Result set " + (i+1) + " :");
+                    Console.Write("Expected output: ");
+                    foreach (var output in testData.OutputList[i])
+                    {
+                        Console.Write(output + ", ");
+                    }
+                    Console.WriteLine();
+
+                    Console.Write("Actual output: ");
+                    foreach (var output in result[i])
+                    {
+                        Console.Write(output + ", ");
+                    }
+                    Console.WriteLine();
+
+                    CollectionAssert.AreEqual((List<int>) result[i], (List<int>) testData.OutputList[i],
+                                              "result sets are not equal");
+                    i++;
                 }
-                Console.WriteLine();
             }
         }
     }
