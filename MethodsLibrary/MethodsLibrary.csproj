@@ -42,12 +42,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Methods\AddTwoNumbers.cs" />
+    <Compile Include="Methods\FirstBadVersion.cs" />
     <Compile Include="Methods\LengthOfLongestSubstring.cs" />
+    <Compile Include="Methods\LetterCombinationOfPhoneNumber.cs" />
+    <Compile Include="Methods\LongestConsecutiveSequence.cs" />
+    <Compile Include="Methods\LongestIncreasingSubsequence.cs" />
     <Compile Include="Methods\LongestPalindromeSubstring.cs" />
+    <Compile Include="Methods\MaximalSquare.cs" />
     <Compile Include="Methods\MaxProfit.cs" />
     <Compile Include="Methods\MaxProfitII.cs" />
+    <Compile Include="Methods\MinimumSizeSubarraySum.cs" />
     <Compile Include="Methods\MoveZeroes.cs" />
+    <Compile Include="Methods\RemoveDuplicatesFromSortedList.cs" />
+    <Compile Include="Methods\RemoveDuplicatesFromSortedListII.cs" />
+    <Compile Include="Methods\ReverseWordsInAString.cs" />
     <Compile Include="Methods\ThreeSum.cs" />
+    <Compile Include="Methods\TrappingRainWater.cs" />
+    <Compile Include="Methods\ValidateBinarySearchTree.cs" />
     <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Methods\TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
