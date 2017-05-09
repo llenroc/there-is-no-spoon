@@ -10,6 +10,9 @@ namespace MethodsLibrary.Methods
     {
         public static string ReverseWords(string s)
         {
+            if (string.IsNullOrEmpty(s)) return null;
+            s = s.Trim();
+
 
         }
     }
