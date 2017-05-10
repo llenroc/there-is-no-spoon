@@ -8,9 +8,9 @@ namespace MethodsLibrary.Methods
 {
     class FirstBadVersion
     {
-        public int FirstBadVersion(int n)
+        public int firstBadVersion(int n)
         {
-
+            return 0;
         }
     }
 }

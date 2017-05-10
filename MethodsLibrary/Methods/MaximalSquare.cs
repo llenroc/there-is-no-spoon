@@ -8,9 +8,9 @@ namespace MethodsLibrary.Methods
 {
     class MaximalSquare
     {
-        public int MaximalSquare(char[,] matrix)
+        public int maximalSquare(char[,] matrix)
         {
-
+            return 0;
         }
     }
 }

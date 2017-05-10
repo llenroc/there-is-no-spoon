@@ -10,7 +10,7 @@ namespace MethodsLibrary.Methods
     {
         public int LengthOfLIS(int[] nums)
         {
-
+            return 0;
         }
     }
 }

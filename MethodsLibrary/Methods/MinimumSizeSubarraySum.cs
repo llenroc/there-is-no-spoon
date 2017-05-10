@@ -10,7 +10,7 @@ namespace MethodsLibrary.Methods
     {
         public int MinSubArrayLen(int s, int[] nums)
         {
-
+            return 0;
         }
     }
 }

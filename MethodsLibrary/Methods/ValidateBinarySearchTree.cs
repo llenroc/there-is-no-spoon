@@ -8,9 +8,9 @@ namespace MethodsLibrary.Methods
 {
     class ValidateBinarySearchTree
     {
-        public bool IsValidBST(TreeNode root)
-        {
-
-        }
+        //public bool IsValidBST(TreeNode root)
+        //{
+        //    return false;
+        //}
     }
 }

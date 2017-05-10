@@ -12,7 +12,7 @@ namespace MethodsLibrary.Methods
         //Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
         public static IList<string> LetterCombinations(string digits)
         {
-
+            return null;
         }
     }
 }

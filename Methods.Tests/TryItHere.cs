@@ -6,6 +6,7 @@ using MethodsLibrary.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
+using System.Text.RegularExpressions;
 
 namespace Methods.Tests
 {
@@ -17,47 +18,14 @@ namespace Methods.Tests
         public void tryItHere()
         {
 
-            IList list1 = new List<IList<int>>
-            {
-                new List<int>
-                {
-                    -1,
-                    0,
-                    1
-                },
-                new List<int>
-                {
-                    -1,
-                    -1,
-                    2
-                }
-            };
+            string ss = "   a   b ";
+            ss = ss.Trim();
+            string[] strings = Regex.Split(ss, @"\W+");
 
-            IList list2 = new List<IList<int>>
+            foreach(string s in strings)
             {
-                new List<int>
-                {
-                    -1,
-                    0,
-                    1
-                },
-                new List<int>
-                {
-                    -1,
-                    -1,
-                    2
-                }
-            };
-
-            int i = 0;
-            while (list1.Count == list2.Count && i < list1.Count && i < list2.Count)
-            {
-
-                
-                CollectionAssert.AreEqual((List<int>)list1[i], (List<int>)list2[i], "result sets are not equal");
-                i++;
+                Console.Write(s + ", ");
             }
-            
         }
     }
 }

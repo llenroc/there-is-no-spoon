@@ -34,6 +34,16 @@ namespace Methods.Tests.Tests
                 {
                     InputString = "the sky is blue",
                     OutputString = "blue is sky the"
+                },
+                new ReverseWordsInAStringTestData
+                {
+                    InputString = "   a   b ",
+                    OutputString = "b a"
+                },
+                new ReverseWordsInAStringTestData
+                {
+                    InputString = "hi!",
+                    OutputString = "hi!"
                 }
             };
         }
@@ -50,6 +60,10 @@ namespace Methods.Tests.Tests
                                   ReverseWordsInAString.ReverseWords(testData.InputString) +
                                   "; Expected Output: " + testData.OutputString);
                 Assert.AreEqual(ReverseWordsInAString.ReverseWords(testData.InputString),
+                                testData.OutputString, "Failed on the case: " + testData.InputString);
+                Assert.AreEqual(ReverseWordsInAString.ReverseWordsG(testData.InputString),
+                                testData.OutputString, "Failed on the case: " + testData.InputString);
+                Assert.AreEqual(ReverseWordsInAString.ReverseWordsGG(testData.InputString),
                                 testData.OutputString, "Failed on the case: " + testData.InputString);
             }
         }

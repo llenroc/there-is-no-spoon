@@ -10,7 +10,7 @@ namespace MethodsLibrary.Methods
     {
         public int Trap(int[] height)
         {
-
+            return 0;
         }
     }
 }

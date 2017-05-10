@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MethodsLibrary.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace MethodsLibrary.Methods
     {
         public ListNode DeleteDuplicates(ListNode head)
         {
-
+            return null;
         }
     }
 }
