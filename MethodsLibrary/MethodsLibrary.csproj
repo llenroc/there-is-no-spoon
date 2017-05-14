@@ -61,6 +61,7 @@
     <Compile Include="Methods\ValidateBinarySearchTree.cs" />
     <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Methods\TwoSum.cs" />
+    <Compile Include="Objects\VersionControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

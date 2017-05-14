@@ -61,6 +61,7 @@
     <Compile Include="Objects\TwoSumTestData.cs" />
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
+    <Compile Include="Tests\FirstBadVersionTest.cs" />
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
     <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\MaxProfitIITest.cs" />
