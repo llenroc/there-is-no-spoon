@@ -1,32 +1,63 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace MethodsLibrary.Methods
 {
     public class ClosestNumbers
     {
         public static int[] closestNumbers(int T, int K, int[] A)
         {
-            List<int> result = new List<int>();
+            if(A==null || A.Length<0)
+            {
+                return null;
+            }
+            int[] result = new int[K];
+            int index = 0;
             int start = 0;
             int end = A.Length-1;
             while (start <= end)
             {
-                int calIndex = start + (end - start) / 2;
-
-                if (A[calIndex] > T)
+                int mid = start + (end - start) / 2;
+                if(A[mid] == T)
                 {
-                    end = calIndex - 1;
+                    result[index++] = A[mid];
+                    end = mid - 1;
+                    start = mid + 1;
+                    break;
+                }
+                if (A[mid] > T)
+                {
+                    end = mid - 1;
+                }
+                if (A[mid] < T)
+                {
+                    start = mid + 1;
+                }
+            }
+            while(index<K)
+            {
+                if(end < 0)
+                {
+                    result[index++] = A[start++];
+                    continue;
+                }
+                else if(start >= A.Length) {
+                    result[index++] = A[end--];
+                    continue;
                 }
                 else
                 {
-                    start = calIndex + 1;
+                    if (T - A[end] <= A[start] - T)
+                    {
+                        result[index++] = A[end--];
+                    }
+                    else
+                    //if (T - A[end] > A[start] - T)
+                    {
+                        result[index++] = A[start++];
+                    }
                 }
-                result.Add(A[end]);
-                result.Add(A[start]);
             }
-
             
-            return result.ToArray();
+            return result;
         }
     }
 }

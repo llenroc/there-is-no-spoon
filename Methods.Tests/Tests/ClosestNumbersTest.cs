@@ -36,6 +36,41 @@ namespace Methods.Tests.Tests
                     InputNumbers = 3,
                     InputArray = new int[] { 1, 4, 6, 8 },
                     OutputArray = new int[] { 4, 1, 6 }
+                },
+                new ClosestNumbersTestData()
+                {
+                    InputTarget = 1,
+                    InputNumbers = 3,
+                    InputArray = new int[] { 1, 4, 6, 8 },
+                    OutputArray = new int[] { 1, 4, 6 }
+                },
+                new ClosestNumbersTestData()
+                {
+                    InputTarget = 8,
+                    InputNumbers = 3,
+                    InputArray = new int[] { 1, 4, 6, 8 },
+                    OutputArray = new int[] { 8, 6, 4 }
+                },
+                new ClosestNumbersTestData()
+                {
+                    InputTarget = 3,
+                    InputNumbers = 3,
+                    InputArray = new int[] { 1, 4, 6, 8 },
+                    OutputArray = new int[] { 4, 1, 6 }
+                },
+                new ClosestNumbersTestData()
+                {
+                    InputTarget = 5,
+                    InputNumbers = 3,
+                    InputArray = new int[] { 1, 4, 6, 8 },
+                    OutputArray = new int[] { 4, 6, 8 }
+                },
+                new ClosestNumbersTestData()
+                {
+                    InputTarget = 7,
+                    InputNumbers = 2,
+                    InputArray = new int[] { 1, 4, 6, 8 },
+                    OutputArray = new int[] { 6, 8 }
                 }
             };
         }
@@ -49,8 +84,11 @@ namespace Methods.Tests.Tests
             foreach (ClosestNumbersTestData testData in TestDataList)
             {
                 Console.WriteLine("Test input: " + string.Join(",", testData.InputArray));
-                
-                CollectionAssert.AreEqual(testData.OutputArray, ClosestNumbers.closestNumbers(testData.InputTarget, testData.InputNumbers, testData.InputArray));
+
+                int[] result = ClosestNumbers.closestNumbers(testData.InputTarget, testData.InputNumbers, testData.InputArray);
+                Console.WriteLine("Test output: " + string.Join(",", result));
+
+                CollectionAssert.AreEqual(testData.OutputArray, result);
             }
         }
 
