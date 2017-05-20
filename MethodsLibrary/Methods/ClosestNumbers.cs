@@ -22,6 +22,7 @@ namespace MethodsLibrary.Methods
                     start = calIndex + 1;
                 }
                 result.Add(A[end]);
+                result.Add(A[start]);
             }
 
             

@@ -18,15 +18,46 @@ namespace Methods.Tests
         public void tryItHere()
         {
 
-            int InputTarget = 3;
-            int InputNumbers = 3;
-            int[] InputArray = new int[] { 1, 4, 6, 8 };
+            int InputTarget = 2;
+            int[] InputArray = new int[] { 1, 4, 5,  7 };
+            Console.WriteLine("Test input: " + string.Join(",", InputArray));
+            Console.WriteLine("Target value: " + InputTarget);
+            Console.WriteLine("Final result: " + binarySearch(InputTarget, InputArray));
+        }
 
-            int[] result = ClosestNumbers.closestNumbers(InputTarget, InputNumbers, InputArray);
-            foreach (var n in result)
+
+        public static int binarySearch(int T, int[] A)
+        {
+            int start = 0;
+            int end = A.Length - 1;
+            int iteration = 1;
+            while (start <= end)
             {
-                Console.WriteLine(n);
+                int mid = start + (end - start) / 2;
+                if(A[mid] == T)
+                {
+                    return T;
+                }
+
+                if (A[mid] > T)
+                {
+                    end = mid - 1;
+                }
+                if(A[mid] < T)
+                {
+                    start = mid + 1;
+                }
+                Console.WriteLine("*************** interation " + iteration + "***********************");
+                Console.WriteLine("mid : " + mid);
+                Console.WriteLine("start : " + start);
+                Console.WriteLine("end : " + end);
+                iteration++;
+
             }
+
+            
+
+            return A[end];
         }
     }
 }

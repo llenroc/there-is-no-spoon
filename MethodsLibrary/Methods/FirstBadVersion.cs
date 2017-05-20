@@ -15,7 +15,7 @@ namespace MethodsLibrary.Methods
             while (start <= n)
             {
                 //int version = (start + n) / 2; Avoid to calculate the sum of huge numbers.
-                // You gotta remember this. It's just brilliant to reduce the calculation
+                // You gotta remember this. It's just brilliant to reduce the calculation or avoid the overflow
                 int version = start + ((n - start) / 2); 
                 if (IsBadVersion(version))
                 {
