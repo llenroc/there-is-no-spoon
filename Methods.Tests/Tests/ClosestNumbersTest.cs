@@ -44,15 +44,13 @@ namespace Methods.Tests.Tests
         /// Test method to verify if the method works
         /// </summary>
         [TestMethod]
-        public void moveZeroesTest()
+        public void closestNumbersTest()
         {
             foreach (ClosestNumbersTestData testData in TestDataList)
             {
                 Console.WriteLine("Test input: " + string.Join(",", testData.InputArray));
-                MoveZeroes.moveZeroes(testData.InputArray);
-                Console.WriteLine("Test output: " + string.Join(",", testData.InputArray));
-
-                CollectionAssert.AreEqual(testData.InputArray, testData.OutputArray);
+                
+                CollectionAssert.AreEqual(testData.OutputArray, ClosestNumbers.closestNumbers(testData.InputTarget, testData.InputNumbers, testData.InputArray));
             }
         }
 

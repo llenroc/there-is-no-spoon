@@ -18,13 +18,14 @@ namespace Methods.Tests
         public void tryItHere()
         {
 
-            string ss = "   a   b ";
-            ss = ss.Trim();
-            string[] strings = Regex.Split(ss, @"\W+");
+            int InputTarget = 3;
+            int InputNumbers = 3;
+            int[] InputArray = new int[] { 1, 4, 6, 8 };
 
-            foreach(string s in strings)
+            int[] result = ClosestNumbers.closestNumbers(InputTarget, InputNumbers, InputArray);
+            foreach (var n in result)
             {
-                Console.Write(s + ", ");
+                Console.WriteLine(n);
             }
         }
     }

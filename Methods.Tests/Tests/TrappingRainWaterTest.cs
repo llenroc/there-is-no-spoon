@@ -47,8 +47,6 @@ namespace Methods.Tests.Tests
                 Console.WriteLine("Test iutput: " + string.Join(",", testData.InputArray));
 
                 Assert.AreEqual(testData.OutputInt, TrappingRainWater.Trap(testData.InputArray));
-                Assert.AreEqual(testData.OutputInt, TrappingRainWater.Trap(testData.InputArray));
-                Assert.AreEqual(testData.OutputInt, TrappingRainWater.Trap(testData.InputArray));
             }
         }
     }
