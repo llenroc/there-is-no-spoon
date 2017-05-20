@@ -54,6 +54,7 @@
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
+    <Compile Include="Objects\ClosestNumbersTestData.cs" />
     <Compile Include="Objects\TrappingRainWaterTestData.cs" />
     <Compile Include="Objects\MaxProfitTestData.cs" />
     <Compile Include="Objects\MoveZeroesTestData.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
     <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\MaxProfitIITest.cs" />
+    <Compile Include="Tests\ClosestNumbersTest.cs" />
     <Compile Include="Tests\TrappingRainWaterTest.cs" />
     <Compile Include="Tests\MaxProfitTest.cs" />
     <Compile Include="Tests\MoveZeroesTest.cs" />
