@@ -7,7 +7,11 @@ namespace MethodsLibrary.Methods
         {
             if(A==null || A.Length<0)
             {
-                return null;
+                return A;
+            }
+            if (K == 0)
+            {
+                return new int[0];
             }
             int[] result = new int[K];
             int index = 0;
@@ -49,8 +53,7 @@ namespace MethodsLibrary.Methods
                     {
                         result[index++] = A[end--];
                     }
-                    else
-                    //if (T - A[end] > A[start] - T)
+                    else //if (T - A[end] > A[start] - T)
                     {
                         result[index++] = A[start++];
                     }
