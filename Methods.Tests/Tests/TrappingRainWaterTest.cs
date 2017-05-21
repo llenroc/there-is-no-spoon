@@ -40,13 +40,15 @@ namespace Methods.Tests.Tests
         /// Test method to verify if the method works
         /// </summary>
         [TestMethod]
-        public void maxProfitTest()
+        public void trappingRainWaterTest()
         {
             foreach (TrappingRainWaterTestData testData in TestDataList)
             {
                 Console.WriteLine("Test iutput: " + string.Join(",", testData.InputArray));
-
-                Assert.AreEqual(testData.OutputInt, TrappingRainWater.Trap(testData.InputArray));
+                Console.WriteLine("Expected output: " + testData.OutputInt);
+                int maxWater = TrappingRainWater.Trap(testData.InputArray);
+                Console.WriteLine("Actual output: " + maxWater);
+                Assert.AreEqual(testData.OutputInt, maxWater);
             }
         }
     }
