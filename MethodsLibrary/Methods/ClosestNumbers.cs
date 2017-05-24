@@ -59,7 +59,6 @@ namespace MethodsLibrary.Methods
                     }
                 }
             }
-            
             return result;
         }
     }
