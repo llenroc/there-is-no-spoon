@@ -5,12 +5,12 @@ namespace Methods.Tests.Objects
     /// Define different inputs for testing
     /// contains different data structures 
     /// </summary>
-    public class TrappingRainWaterTestData
+    public class ValidPerfectSquareTestData
     {
         /// <summary>
-        /// Gets or sets a string type input for testing
+        /// Gets or sets a int type input for testing
         /// </summary>
-        public int[] InputArray { get; set; }
+        public int InputInt { get; set; }
 
         /// <summary>
         /// Gets or sets a int type output for testing

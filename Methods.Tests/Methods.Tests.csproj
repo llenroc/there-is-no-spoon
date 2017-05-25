@@ -61,6 +61,7 @@
     <Compile Include="Objects\ReverseWordsInAStringTestData.cs" />
     <Compile Include="Objects\ThreeSumTestData.cs" />
     <Compile Include="Objects\TwoSumTestData.cs" />
+    <Compile Include="Objects\ValidPerfectSquareTestData.cs" />
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\FirstBadVersionTest.cs" />
