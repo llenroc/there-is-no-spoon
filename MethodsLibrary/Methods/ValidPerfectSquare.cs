@@ -3,12 +3,40 @@ namespace MethodsLibrary.Methods
 {
     public class ValidPerfectSquare
     {
-        public bool IsPerfectSquare(int num)
+        public static bool IsPerfectSquare(int num)
         {
-            bool flag = false;
+            if (num == 0)
+            {
+                return false;
+            }
+            long square = 1;
+            while (square * square < num)
+            {
+                square *= 2;
+            }
+            if (square * square == num) return true;
 
+            long left = square / 2;
+            long right = square;
+            while (left <= right)
+            {
+                long mid = left + (right - left) / 2;
+                square = mid * mid;
+                if (square == num)
+                {
+                    return true;
+                }
+                if (square < num)
+                {
+                    left = mid + 1;
+                }
+                if (square > num)
+                {
+                    right = mid - 1;
+                }
 
-            return flag;
+            }
+            return false;
         }
     }
 }

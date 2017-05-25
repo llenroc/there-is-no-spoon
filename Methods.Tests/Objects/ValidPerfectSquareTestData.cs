@@ -13,8 +13,8 @@ namespace Methods.Tests.Objects
         public int InputInt { get; set; }
 
         /// <summary>
-        /// Gets or sets a int type output for testing
+        /// Gets or sets a bool type output for testing
         /// </summary>
-        public int OutputInt { set; get; }
+        public bool OutputBool { set; get; }
     }
 }

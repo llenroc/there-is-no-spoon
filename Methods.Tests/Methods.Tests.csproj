@@ -76,6 +76,7 @@
     <Compile Include="Tests\ThreeSumTest.cs" />
     <Compile Include="Tests\TwoSumTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ValidPerfectSquareTest.cs" />
     <Compile Include="TryItHere.cs" />
   </ItemGroup>
   <ItemGroup>
