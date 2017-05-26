@@ -53,6 +53,7 @@
     <Compile Include="Methods\MaximalSquare.cs" />
     <Compile Include="Methods\MaxProfit.cs" />
     <Compile Include="Methods\MaxProfitII.cs" />
+    <Compile Include="Methods\MergeTwoSortedLists.cs" />
     <Compile Include="Methods\MinimumSizeSubarraySum.cs" />
     <Compile Include="Methods\MoveZeroes.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedList.cs" />
