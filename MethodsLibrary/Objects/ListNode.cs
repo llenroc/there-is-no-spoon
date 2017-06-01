@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace MethodsLibrary.Objects
+﻿namespace MethodsLibrary.Objects
 {
     public class ListNode
     {

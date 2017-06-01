@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Methods\AddTwoNumbers.cs" />
     <Compile Include="Methods\BinarySearch.cs" />
+    <Compile Include="Methods\BinaryTreePreorderTraversal.cs" />
     <Compile Include="Methods\ClosestNumbers.cs" />
     <Compile Include="Methods\FirstBadVersion.cs" />
     <Compile Include="Methods\LengthOfLongestSubstring.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Methods\ValidPerfectSquare.cs" />
     <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Methods\TwoSum.cs" />
+    <Compile Include="Objects\TreeNode.cs" />
     <Compile Include="Objects\VersionControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
