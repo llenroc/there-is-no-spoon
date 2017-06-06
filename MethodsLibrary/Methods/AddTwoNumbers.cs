@@ -18,7 +18,7 @@ namespace MethodsLibrary.Methods
         public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode calNode = new ListNode(0);
-            ListNode resultNode= calNode;
+            ListNode resultNode = calNode;
             int jinWei = 0;
 
             while ((l1 != null) || (l2 != null))

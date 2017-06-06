@@ -57,7 +57,8 @@ namespace Methods.Tests.Tests
         {
             foreach (LengthOfLongestSubstringTestData testData in TestDataList)
             {
-                Assert.AreEqual(LengthOfLongestSubstring.lengthOfLongestSubstringRevised(testData.InputString), testData.OutputInt, "Failed on the case: " + testData.InputString);
+                Assert.AreEqual(LengthOfLongestSubstring.lengthOfLongestSubstringRevised(testData.InputString),
+                                testData.OutputInt, "Failed on the case: " + testData.InputString);
             }
         }
     }

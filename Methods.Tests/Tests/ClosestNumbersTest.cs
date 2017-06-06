@@ -1,9 +1,8 @@
-﻿using Methods.Tests.Objects;
+﻿using System;
+using System.Collections.Generic;
+using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-
 
 namespace Methods.Tests.Tests
 {
@@ -23,54 +22,54 @@ namespace Methods.Tests.Tests
         {
             TestDataList = new List<ClosestNumbersTestData>
             {
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 2,
                     InputNumbers = 3,
-                    InputArray = new int[] { 1, 2, 3 },
-                    OutputArray = new int[] { 2, 1, 3 } // or {3, 1, 2}
+                    InputArray = new[] {1, 2, 3},
+                    OutputArray = new[] {2, 1, 3} // or {3, 1, 2}
                 },
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 3,
                     InputNumbers = 3,
-                    InputArray = new int[] { 1, 4, 6, 8 },
-                    OutputArray = new int[] { 4, 1, 6 }
+                    InputArray = new[] {1, 4, 6, 8},
+                    OutputArray = new[] {4, 1, 6}
                 },
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 1,
                     InputNumbers = 3,
-                    InputArray = new int[] { 1, 4, 6, 8 },
-                    OutputArray = new int[] { 1, 4, 6 }
+                    InputArray = new[] {1, 4, 6, 8},
+                    OutputArray = new[] {1, 4, 6}
                 },
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 8,
                     InputNumbers = 3,
-                    InputArray = new int[] { 1, 4, 6, 8 },
-                    OutputArray = new int[] { 8, 6, 4 }
+                    InputArray = new[] {1, 4, 6, 8},
+                    OutputArray = new[] {8, 6, 4}
                 },
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 3,
                     InputNumbers = 3,
-                    InputArray = new int[] { 1, 4, 6, 8 },
-                    OutputArray = new int[] { 4, 1, 6 }
+                    InputArray = new[] {1, 4, 6, 8},
+                    OutputArray = new[] {4, 1, 6}
                 },
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 5,
                     InputNumbers = 3,
-                    InputArray = new int[] { 1, 4, 6, 8 },
-                    OutputArray = new int[] { 4, 6, 8 }
+                    InputArray = new[] {1, 4, 6, 8},
+                    OutputArray = new[] {4, 6, 8}
                 },
-                new ClosestNumbersTestData()
+                new ClosestNumbersTestData
                 {
                     InputTarget = 7,
                     InputNumbers = 2,
-                    InputArray = new int[] { 1, 4, 6, 8 },
-                    OutputArray = new int[] { 6, 8 }
+                    InputArray = new[] {1, 4, 6, 8},
+                    OutputArray = new[] {6, 8}
                 }
             };
         }
@@ -85,12 +84,12 @@ namespace Methods.Tests.Tests
             {
                 Console.WriteLine("Test input: " + string.Join(",", testData.InputArray));
 
-                int[] result = ClosestNumbers.closestNumbers(testData.InputTarget, testData.InputNumbers, testData.InputArray);
+                int[] result = ClosestNumbers.closestNumbers(testData.InputTarget, testData.InputNumbers,
+                                                             testData.InputArray);
                 Console.WriteLine("Test output: " + string.Join(",", result));
 
                 CollectionAssert.AreEqual(testData.OutputArray, result);
             }
         }
-
     }
 }

@@ -66,9 +66,10 @@ namespace MethodsLibrary.Methods
                 }
                 else
                 {
-                    dictionary.Add(s[i], i); // C# Dictionary can't handle duplicate keys or null keys like HashMap in Java
+                    dictionary.Add(s[i], i);
+                        // C# Dictionary can't handle duplicate keys or null keys like HashMap in Java
                 }
-                maxLength = Math.Max(maxLength, (i - j) + 1); 
+                maxLength = Math.Max(maxLength, (i - j) + 1);
             }
 
             return maxLength;

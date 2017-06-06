@@ -1,11 +1,8 @@
-﻿using Methods.Tests.Objects;
+﻿using System;
+using System.Collections.Generic;
+using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Methods.Tests.Tests
 {
@@ -25,14 +22,14 @@ namespace Methods.Tests.Tests
         {
             TestDataList = new List<MaxProfitTestData>
             {
-                new MaxProfitTestData()
+                new MaxProfitTestData
                 {
-                    InputArray = new int[] { 7, 1, 5, 3, 6, 4 },
+                    InputArray = new[] {7, 1, 5, 3, 6, 4},
                     OutputInt = 7
                 },
-                new MaxProfitTestData()
+                new MaxProfitTestData
                 {
-                    InputArray = new int[] { 7, 6, 4, 3, 1 },
+                    InputArray = new[] {7, 6, 4, 3, 1},
                     OutputInt = 0
                 }
             };

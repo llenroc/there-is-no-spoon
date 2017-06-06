@@ -1,11 +1,10 @@
-﻿
-namespace MethodsLibrary.Methods
+﻿namespace MethodsLibrary.Methods
 {
     public class ClosestNumbers
     {
         public static int[] closestNumbers(int T, int K, int[] A)
         {
-            if(A==null || A.Length<0)
+            if ((A == null) || (A.Length < 0))
             {
                 return A;
             }
@@ -16,11 +15,11 @@ namespace MethodsLibrary.Methods
             int[] result = new int[K];
             int index = 0;
             int start = 0;
-            int end = A.Length-1;
+            int end = A.Length - 1;
             while (start <= end)
             {
-                int mid = start + (end - start) / 2;
-                if(A[mid] == T)
+                int mid = start + ((end - start) / 2);
+                if (A[mid] == T)
                 {
                     result[index++] = A[mid];
                     end = mid - 1;
@@ -36,20 +35,19 @@ namespace MethodsLibrary.Methods
                     start = mid + 1;
                 }
             }
-            while(index<K)
+            while (index < K)
             {
-                if(end < 0)
+                if (end < 0)
                 {
                     result[index++] = A[start++];
-                    continue;
                 }
-                else if(start >= A.Length) {
+                else if (start >= A.Length)
+                {
                     result[index++] = A[end--];
-                    continue;
                 }
                 else
                 {
-                    if (T - A[end] <= A[start] - T)
+                    if ((T - A[end]) <= (A[start] - T))
                     {
                         result[index++] = A[end--];
                     }

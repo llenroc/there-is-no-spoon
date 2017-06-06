@@ -65,7 +65,6 @@ namespace Methods.Tests.Tests
                 if (expectedResult != null)
                 {
                     Assert.Fail("Failed on extra node " + expectedResult.val);
-
                 }
                 Console.WriteLine("************************************");
             }

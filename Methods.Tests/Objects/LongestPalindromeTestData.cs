@@ -1,5 +1,4 @@
-﻿
-namespace Methods.Tests.Objects
+﻿namespace Methods.Tests.Objects
 {
     /// <summary>
     /// Define different inputs for testing

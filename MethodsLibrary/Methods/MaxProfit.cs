@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MethodsLibrary.Methods
 {
@@ -12,7 +8,7 @@ namespace MethodsLibrary.Methods
         //and calculate the max profit 
         public static int maxProfit(int[] prices)
         {
-            if(prices == null || prices.Length==0)
+            if ((prices == null) || (prices.Length == 0))
             {
                 return 0;
             }
@@ -27,16 +23,16 @@ namespace MethodsLibrary.Methods
 
         public static int maxProfitG(int[] prices)
         {
-            if (prices == null || prices.Length == 0)
+            if ((prices == null) || (prices.Length == 0))
             {
                 return 0;
             }
             int minSoFar = prices[0], profit = 0;
             for (int i = 0; i < prices.Length; i++)
             {
-                if(prices[i] > minSoFar)
+                if (prices[i] > minSoFar)
                 {
-                    profit = Math.Max(profit, prices[i]-minSoFar);
+                    profit = Math.Max(profit, prices[i] - minSoFar);
                 }
                 else
                 {
@@ -48,17 +44,17 @@ namespace MethodsLibrary.Methods
 
         public static int maxProfitGG(int[] prices)
         {
-            if (prices == null || prices.Length == 0)
+            if ((prices == null) || (prices.Length == 0))
             {
                 return 0;
             }
             int min = int.MaxValue;
             int profit = 0;
 
-            foreach(int num in prices)
+            foreach (int num in prices)
             {
-                min = num<min ? num : min;
-                profit = num - min>profit  ? num - min : profit;
+                min = num < min ? num : min;
+                profit = (num - min) > profit ? num - min : profit;
             }
             return profit;
         }

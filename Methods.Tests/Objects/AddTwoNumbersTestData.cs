@@ -1,18 +1,9 @@
 ﻿using MethodsLibrary.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Methods.Tests.Objects
 {
     public class AddTwoNumbersTestData
     {
-        public AddTwoNumbersTestData()
-        {
-        }
-
         /// <summary>
         /// Gets or sets value for singly-linked list input
         /// </summary>
