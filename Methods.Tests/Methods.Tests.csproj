@@ -64,7 +64,7 @@
     <Compile Include="Objects\ValidPerfectSquareTestData.cs" />
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
-    <Compile Include="Tests\BinaryTreePreorderTraversalTest.cs" />
+    <Compile Include="Tests\BinaryTreeTraversalTest.cs" />
     <Compile Include="Tests\FirstBadVersionTest.cs" />
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
     <Compile Include="Tests\LongestPalindromeTest.cs" />

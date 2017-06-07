@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Methods\AddTwoNumbers.cs" />
     <Compile Include="Methods\BinarySearch.cs" />
+    <Compile Include="Methods\BinaryTreePostorderTraversal.cs" />
+    <Compile Include="Methods\BinaryTreeInorderTraversal.cs" />
     <Compile Include="Methods\BinaryTreePreorderTraversal.cs" />
     <Compile Include="Methods\ClosestNumbers.cs" />
     <Compile Include="Methods\FirstBadVersion.cs" />

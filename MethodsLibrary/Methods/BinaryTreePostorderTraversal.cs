@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace MethodsLibrary.Methods
 {
-    public class BinaryTreePreorderTraversal
+    public class BinaryTreePostorderTraversal
     {
-        public static IList<int> PreorderTraversal(TreeNode root)
+        public static IList<int> PostorderTraversal(TreeNode root)
         {
             IList<int> result = new List<int>();
-            if (root == null)
+            if(root == null)
             {
                 return null;
             }
@@ -22,9 +22,9 @@ namespace MethodsLibrary.Methods
             {
                 return;
             }
-            list.Add(node.val);
             traverse(node.left, list);
             traverse(node.right, list);
+            list.Add(node.val);
         }
 
     }

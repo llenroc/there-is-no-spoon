@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MethodsLibrary.Methods
 {
-    public class BinaryTreePreorderTraversal
+    public class BinaryTreeInorderTraversal
     {
-        public static IList<int> PreorderTraversal(TreeNode root)
+        public static IList<int> InorderTraversal(TreeNode root)
         {
             IList<int> result = new List<int>();
             if (root == null)
@@ -22,8 +22,8 @@ namespace MethodsLibrary.Methods
             {
                 return;
             }
-            list.Add(node.val);
             traverse(node.left, list);
+            list.Add(node.val);
             traverse(node.right, list);
         }
 
