@@ -10,7 +10,7 @@ namespace MethodsLibrary.Methods
             IList<int> result = new List<int>();
             if(root == null)
             {
-                return null;
+                return result;
             }
             traverse(root, result);
             return result;
