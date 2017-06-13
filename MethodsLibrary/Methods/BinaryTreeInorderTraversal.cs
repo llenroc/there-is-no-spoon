@@ -5,6 +5,7 @@ namespace MethodsLibrary.Methods
 {
     public class BinaryTreeInorderTraversal
     {
+        // Recursion
         public static IList<int> InorderTraversal(TreeNode root)
         {
             IList<int> result = new List<int>();
@@ -27,5 +28,39 @@ namespace MethodsLibrary.Methods
             traverse(node.right, list);
         }
 
+        // Iterative
+        public static IList<int> IterativeInorderTraversal(TreeNode root)
+        {
+            IList<int> inorder = new List<int>();
+            if (root == null)
+            {
+                return inorder;
+            }
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+
+            TreeNode curt = root;
+
+            while (curt != null || stack.Count != 0)
+            {
+
+                while (curt != null)
+                {
+
+                    stack.Push(curt);
+
+                    curt = curt.left;
+
+                }
+
+                curt = stack.Pop();
+
+                inorder.Add(curt.val);
+
+                curt = curt.right;
+
+            }
+
+            return inorder;
+        }
     }
 }

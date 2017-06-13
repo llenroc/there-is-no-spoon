@@ -31,6 +31,15 @@ namespace Methods.Tests.Tests
             {
                 Console.Write(i + ", ");
             }
+
+            Console.WriteLine();
+            var iterativePreorder = BinaryTreePreorderTraversal.IterativePreorderTraversal(root);
+            Console.WriteLine("Preorder Traversal: ");
+            foreach (int i in iterativePreorder)
+            {
+                Console.Write(i + ", ");
+            }
+
         }
 
         [TestMethod]
@@ -42,6 +51,14 @@ namespace Methods.Tests.Tests
             {
                 Console.Write(i + ", ");
             }
+
+            Console.WriteLine();
+            var iterativeInorder = BinaryTreeInorderTraversal.IterativeInorderTraversal(root);
+            Console.WriteLine("Inorder Traversal: ");
+            foreach (int i in iterativeInorder)
+            {
+                Console.Write(i + ", ");
+            }
         }
 
         [TestMethod]
@@ -50,6 +67,14 @@ namespace Methods.Tests.Tests
             var result = BinaryTreePostorderTraversal.PostorderTraversal(root);
             Console.WriteLine("Postorder Traversal: ");
             foreach (int i in result)
+            {
+                Console.Write(i + ", ");
+            }
+
+            Console.WriteLine();
+            var iterativePostorder = BinaryTreePostorderTraversal.IterativePostorderTraversal(root);
+            Console.WriteLine("Inorder Traversal: ");
+            foreach (int i in iterativePostorder)
             {
                 Console.Write(i + ", ");
             }
