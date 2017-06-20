@@ -55,6 +55,7 @@
     <Compile Include="Methods\LongestIncreasingSubsequence.cs" />
     <Compile Include="Methods\LongestPalindromeSubstring.cs" />
     <Compile Include="Methods\MaximalSquare.cs" />
+    <Compile Include="Methods\MaximumDepthOfBinaryTree.cs" />
     <Compile Include="Methods\MaxProfit.cs" />
     <Compile Include="Methods\MaxProfitII.cs" />
     <Compile Include="Methods\MergeTwoSortedLists.cs" />

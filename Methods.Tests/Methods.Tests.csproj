@@ -65,6 +65,7 @@
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
+    <Compile Include="Tests\MaximumDepthofBinaryTreeTest.cs" />
     <Compile Include="Tests\BinaryTreeTraversalTest.cs" />
     <Compile Include="Tests\FirstBadVersionTest.cs" />
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />

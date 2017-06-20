@@ -3,6 +3,45 @@ namespace MethodsLibrary.Methods
 {
     public class BinarySearch
     {
+
+        /// <summary>
+        /// This is my binary search template
+        /// </summary>
+        /// <param name="Target"> Target value to search </param>
+        /// <param name="A"> Array of numbers </param>
+        /// <returns> the index of the target in the array or the index of the first value less than target if the it's not found </returns>
+        public static int myBinarySearch(int Target, int[] A)
+        {
+            if (A == null || A.Length == 0)
+            {
+                return -1;
+            }
+            int start = 0;
+            int end = A.Length - 1;
+            while (start <= end)
+            {
+                int mid = start + (end - start) / 2;
+                if (A[mid] == Target)
+                {
+                    return mid;
+                }
+
+                if (A[mid] > Target)
+                {
+                    end = mid - 1;
+                }
+                if (A[mid] < Target)
+                {
+                    start = mid + 1;
+                }
+            }
+            // If the target value is not in the array
+            // the end would be the index of the first value that's less than the target
+            // the start would be the index of the first value that's greater than the target
+            // That means the target should fall between A[end] and A[start] -- A[end] < Target < A[start]
+            return A[end];
+        }
+
         public static int upperBound(int[] nums, int target)
         {
             if (nums == null || nums.Length == 0) return -1;
@@ -58,32 +97,5 @@ namespace MethodsLibrary.Methods
             return -1;
         }
 
-        public static int myBinarySearch(int T, int[] A)
-        {
-            if (A == null || A.Length == 0)
-            {
-                return -1;
-            }
-            int start = 0;
-            int end = A.Length - 1;
-            while (start <= end)
-            {
-                int mid = start + (end - start) / 2;
-                if (A[mid] == T)
-                {
-                    return T;
-                }
-
-                if (A[mid] > T)
-                {
-                    end = mid - 1;
-                }
-                if (A[mid] < T)
-                {
-                    start = mid + 1;
-                }
-            }
-            return A[end];
-        }
     }
 }
