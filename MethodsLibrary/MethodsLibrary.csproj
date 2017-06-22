@@ -56,14 +56,17 @@
     <Compile Include="Methods\LongestPalindromeSubstring.cs" />
     <Compile Include="Methods\MaximalSquare.cs" />
     <Compile Include="Methods\MaximumDepthOfBinaryTree.cs" />
+    <Compile Include="Methods\MaximumSubarray.cs" />
     <Compile Include="Methods\MaxProfit.cs" />
     <Compile Include="Methods\MaxProfitII.cs" />
     <Compile Include="Methods\MergeTwoSortedLists.cs" />
     <Compile Include="Methods\MinimumSizeSubarraySum.cs" />
     <Compile Include="Methods\MoveZeroes.cs" />
+    <Compile Include="Methods\NumMatrix.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedList.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedListII.cs" />
     <Compile Include="Methods\ReverseWordsInAString.cs" />
+    <Compile Include="Methods\SearchInRotatedSortedArray.cs" />
     <Compile Include="Methods\ThreeSum.cs" />
     <Compile Include="Methods\TrappingRainWater.cs" />
     <Compile Include="Methods\ValidateBinarySearchTree.cs" />
