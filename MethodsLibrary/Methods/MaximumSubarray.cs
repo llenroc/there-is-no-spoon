@@ -5,7 +5,9 @@ namespace MethodsLibrary.Methods
     {
         public static int MaxSubArray(int[] nums)
         {
+            int result = 0;
 
+            return result;
         }
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
     <Compile Include="Objects\ClosestNumbersTestData.cs" />
+    <Compile Include="Objects\RangeSumQuery2DTestData.cs" />
     <Compile Include="Objects\SearchInRotatedSortedArrayTestData.cs" />
     <Compile Include="Objects\MaximumSubarrayTestData.cs" />
     <Compile Include="Objects\TrappingRainWaterTestData.cs" />

@@ -5,7 +5,9 @@ namespace MethodsLibrary.Methods
     {
         public static int Search(int[] nums, int target)
         {
+            int result = -1;
 
+            return result;
         }
     }
 }
