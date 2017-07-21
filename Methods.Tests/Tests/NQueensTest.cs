@@ -40,6 +40,20 @@ namespace Methods.Tests.Tests
                             "Q...",
                             "...Q",
                             ".Q.."
+                        },
+                        new List<string>
+                        {
+                            "Q...",
+                            ".Q..",
+                            "..Q.",
+                            "...Q"
+                        },
+                        new List<string>
+                        {
+                            "...Q",
+                            "..Q.",
+                            ".Q..",
+                            "Q..."
                         }
                     }
                 }
@@ -54,9 +68,14 @@ namespace Methods.Tests.Tests
         {
             foreach (var testdata in TestDataList)
             {
-                foreach (var output in testdata.OutputList)
+                IList<IList<string>> queens = NQueens.SolveNQueens(testdata.Input);
+                foreach (var output in queens)
                 {
-                    Console.WriteLine(NQueens.isLegit(output));
+                    foreach (var chessboard in output)
+                    {
+                        Console.WriteLine(chessboard);
+                    }
+                    Console.WriteLine("******************");
                 }
             }
         }
