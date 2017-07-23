@@ -14,42 +14,59 @@ namespace MethodsLibrary.Methods
             }
             IList<string> solution = new List<string>();
 
-            Finding(solution, solutions, n, 0, 0);
-
+            Finding(solution, solutions, n, 0);
+            
             return solutions;
         }
 
-        private static void Finding(IList<string> solution, IList<IList<string>> solutions, int n, int rows, int columns)
-        {
+        public static void Finding(IList<string> solution, IList<IList<string>> solutions, int n, int it)
+        { 
             if (isLegit(solution, n))
             {
-                solutions.Add(solution);
+                solutions.Add(new List<string>(solution));
+                //if(solutions.Count == 2)
+                //{
+                //    foreach (var ss in solutions)
+                //    {
+                //        foreach (var s in ss)
+                //        {
+                //            System.Console.WriteLine(s);
+                //        }
+                //        System.Console.WriteLine("----");
+                //    }
+                //}
                 return;
             }
-            if (rows == n)
+            if (it == n)
             {
-                solution.Remove(solution[solution.Count - 1]);
                 return;
             }
-            for (int row = rows; row < n; row++)
+            for (int column = 0; column < n; column++)
             {
                 StringBuilder sb = new StringBuilder();
                 for (int index = 0; index < n; index ++)
                 {
-                    if (index == columns)
+                    if (index == column)
                     {
                         sb.Append("Q");
                         continue;
                     }
                     sb.Append(".");
                 }
-                solution.Add(sb.ToString());
-                Finding(solution, solutions, n, ++rows, columns);
                 
-                columns++;
+                solution.Add(sb.ToString());
+                
+                Finding(solution, solutions, n, it+1);
+                solution.RemoveAt(solution.Count - 1);
             }
         }
 
+        /// <summary>
+        /// Check to see if the Queens could live together :)
+        /// </summary>
+        /// <param name="chessBoard"> chessBoard which has all the queens populated </param>
+        /// <param name="n"> number of rows (columns) </param>
+        /// <returns> true if nqueens could live together </returns>
         public static bool isLegit(IList<string> chessBoard, int n)
         {
             if ((chessBoard == null) || (chessBoard.Count < n) || (chessBoard[0].Length < n))
