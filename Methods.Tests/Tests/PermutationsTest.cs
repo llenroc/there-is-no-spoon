@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
@@ -64,14 +65,17 @@ namespace Methods.Tests.Tests
         {
             foreach (var testdata in TestDataList)
             {
-                IList<IList<int>> queens = Permutations.Permute(testdata.Input);
-                foreach (var output in queens)
+                IList<IList<int>> permutations = Permutations.Permute(testdata.Input);
+                for (int index = 0; index < permutations.Count; index++)
                 {
-                    foreach (var chessboard in output)
+                    var output = permutations[index];
+                    foreach (var permutation in output)
                     {
-                        Console.WriteLine(chessboard);
+                        Console.Write(permutation + ",");
                     }
+                    Console.WriteLine();
                     Console.WriteLine("******************");
+                    CollectionAssert.AreEqual(testdata.OutputList[index],(ICollection) permutations[index], "Not a correct permutation!");
                 }
             }
         }
