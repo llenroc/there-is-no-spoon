@@ -64,6 +64,7 @@
     <Compile Include="Methods\MoveZeroes.cs" />
     <Compile Include="Methods\NQueens.cs" />
     <Compile Include="Methods\NumMatrix.cs" />
+    <Compile Include="Methods\Permutations.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedList.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedListII.cs" />
     <Compile Include="Methods\ReverseWordsInAString.cs" />

@@ -55,6 +55,7 @@
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
     <Compile Include="Objects\ClosestNumbersTestData.cs" />
+    <Compile Include="Objects\PermutationsTestData.cs" />
     <Compile Include="Objects\NQueensTestData.cs" />
     <Compile Include="Objects\RangeSumQuery2DTestData.cs" />
     <Compile Include="Objects\SearchInRotatedSortedArrayTestData.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
+    <Compile Include="Tests\PermutationsTest.cs" />
     <Compile Include="Tests\NQueensTest.cs" />
     <Compile Include="Tests\MaximumDepthofBinaryTreeTest.cs" />
     <Compile Include="Tests\BinaryTreeTraversalTest.cs" />
