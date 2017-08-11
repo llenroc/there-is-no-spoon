@@ -40,6 +40,15 @@ namespace MethodsLibrary.Methods
             return result;
         }
 
+        public static void combination (string digits, Dictionary<char, string> panel, IList<string> result, StringBuilder sb, int n)
+        {
+            if(sb.Length == digits.Length)
+            {
+                result.Add(sb.ToString());
+                return;
+            }
+        }
+
         
     }
 }
