@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
+    <Compile Include="Objects\LongestConsecutiveSequenceTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
     <Compile Include="Objects\ClosestNumbersTestData.cs" />
     <Compile Include="Objects\LetterCombinationsTestData.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
     <Compile Include="Tests\LetterCombinationsOfAPhoneNumberTest.cs" />
+    <Compile Include="Tests\LongestConsecutiveSequenceTest.cs" />
     <Compile Include="Tests\PermutationsTest.cs" />
     <Compile Include="Tests\NQueensTest.cs" />
     <Compile Include="Tests\MaximumDepthofBinaryTreeTest.cs" />
