@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MethodsLibrary.Methods
 {
@@ -27,7 +24,7 @@ namespace MethodsLibrary.Methods
                 { '4', "ghi" },
                 { '5', "jkl" },
                 { '6', "mno" },
-                { '7', "pqr" },
+                { '7', "pqrs" },
                 { '8', "tuv" },
                 { '9', "wxyz" },
                 { '0', " " },
@@ -35,7 +32,7 @@ namespace MethodsLibrary.Methods
                 { '#', "" }
             };
 
-            
+            combination(digits, panel, result, new StringBuilder(), 0);
 
             return result;
         }
@@ -47,8 +44,15 @@ namespace MethodsLibrary.Methods
                 result.Add(sb.ToString());
                 return;
             }
-        }
 
-        
+            string s = panel[digits[n]];
+
+            for(int i=0; i<s.Length; i++)
+            {
+                sb.Append(s[i]);
+                combination(digits, panel, result, sb, n+1);
+                sb.Remove(sb.Length-1,1);
+            }
+        }
     }
 }
