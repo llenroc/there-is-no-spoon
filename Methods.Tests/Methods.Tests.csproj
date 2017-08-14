@@ -62,6 +62,7 @@
     <Compile Include="Objects\RangeSumQuery2DTestData.cs" />
     <Compile Include="Objects\SearchInRotatedSortedArrayTestData.cs" />
     <Compile Include="Objects\MaximumSubarrayTestData.cs" />
+    <Compile Include="Objects\SlidingWindowMaximumTestData.cs" />
     <Compile Include="Objects\TrappingRainWaterTestData.cs" />
     <Compile Include="Objects\MaxProfitTestData.cs" />
     <Compile Include="Objects\MoveZeroesTestData.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Tests\MaxProfitIITest.cs" />
     <Compile Include="Tests\ClosestNumbersTest.cs" />
     <Compile Include="Tests\MaximumSubarrayTest.cs" />
+    <Compile Include="Tests\SlidingWindowMaximumTest.cs" />
     <Compile Include="Tests\TrappingRainWaterTest.cs" />
     <Compile Include="Tests\MaxProfitTest.cs" />
     <Compile Include="Tests\MoveZeroesTest.cs" />
