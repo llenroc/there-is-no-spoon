@@ -48,6 +48,7 @@
     <Compile Include="Methods\BinaryTreeInorderTraversal.cs" />
     <Compile Include="Methods\BinaryTreePreorderTraversal.cs" />
     <Compile Include="Methods\ClosestNumbers.cs" />
+    <Compile Include="Methods\ContinuousSubarraySum.cs" />
     <Compile Include="Methods\FirstBadVersion.cs" />
     <Compile Include="Methods\LengthOfLongestSubstring.cs" />
     <Compile Include="Methods\LetterCombinationOfPhoneNumber.cs" />
