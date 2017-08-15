@@ -53,13 +53,16 @@
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
+    <Compile Include="Objects\LongestConsecutiveSequenceTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
     <Compile Include="Objects\ClosestNumbersTestData.cs" />
+    <Compile Include="Objects\LetterCombinationsTestData.cs" />
     <Compile Include="Objects\PermutationsTestData.cs" />
     <Compile Include="Objects\NQueensTestData.cs" />
     <Compile Include="Objects\RangeSumQuery2DTestData.cs" />
     <Compile Include="Objects\SearchInRotatedSortedArrayTestData.cs" />
     <Compile Include="Objects\MaximumSubarrayTestData.cs" />
+    <Compile Include="Objects\SlidingWindowMaximumTestData.cs" />
     <Compile Include="Objects\TrappingRainWaterTestData.cs" />
     <Compile Include="Objects\MaxProfitTestData.cs" />
     <Compile Include="Objects\MoveZeroesTestData.cs" />
@@ -70,6 +73,8 @@
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
+    <Compile Include="Tests\LetterCombinationsOfAPhoneNumberTest.cs" />
+    <Compile Include="Tests\LongestConsecutiveSequenceTest.cs" />
     <Compile Include="Tests\PermutationsTest.cs" />
     <Compile Include="Tests\NQueensTest.cs" />
     <Compile Include="Tests\MaximumDepthofBinaryTreeTest.cs" />
@@ -82,6 +87,7 @@
     <Compile Include="Tests\MaxProfitIITest.cs" />
     <Compile Include="Tests\ClosestNumbersTest.cs" />
     <Compile Include="Tests\MaximumSubarrayTest.cs" />
+    <Compile Include="Tests\SlidingWindowMaximumTest.cs" />
     <Compile Include="Tests\TrappingRainWaterTest.cs" />
     <Compile Include="Tests\MaxProfitTest.cs" />
     <Compile Include="Tests\MoveZeroesTest.cs" />
