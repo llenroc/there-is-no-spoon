@@ -60,6 +60,7 @@
     <Compile Include="Methods\MaximumSubarray.cs" />
     <Compile Include="Methods\MaxProfit.cs" />
     <Compile Include="Methods\MaxProfitII.cs" />
+    <Compile Include="Methods\MergeIntervals.cs" />
     <Compile Include="Methods\MergeTwoSortedLists.cs" />
     <Compile Include="Methods\MinimumSizeSubarraySum.cs" />
     <Compile Include="Methods\MoveZeroes.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Methods\TrappingRainWater.cs" />
     <Compile Include="Methods\ValidateBinarySearchTree.cs" />
     <Compile Include="Methods\ValidPerfectSquare.cs" />
+    <Compile Include="Objects\Interval.cs" />
     <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Methods\TwoSum.cs" />
     <Compile Include="Objects\TreeNode.cs" />

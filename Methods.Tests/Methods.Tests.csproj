@@ -75,6 +75,7 @@
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
     <Compile Include="Tests\LetterCombinationsOfAPhoneNumberTest.cs" />
     <Compile Include="Tests\LongestConsecutiveSequenceTest.cs" />
+    <Compile Include="Tests\MergeIntervalsTest.cs" />
     <Compile Include="Tests\PermutationsTest.cs" />
     <Compile Include="Tests\NQueensTest.cs" />
     <Compile Include="Tests\MaximumDepthofBinaryTreeTest.cs" />
