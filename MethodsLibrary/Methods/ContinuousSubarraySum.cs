@@ -4,7 +4,7 @@
     {
         public bool CheckSubarraySum(int[] nums, int k)
         {
-
+            return false;
         }
     }
 }
