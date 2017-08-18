@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
+    <Compile Include="Objects\CoinChange2TestData.cs" />
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
     <Compile Include="Objects\LongestConsecutiveSequenceTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
+    <Compile Include="Tests\CoinChange2Test.cs" />
     <Compile Include="Tests\LetterCombinationsOfAPhoneNumberTest.cs" />
     <Compile Include="Tests\LongestConsecutiveSequenceTest.cs" />
     <Compile Include="Tests\MergeIntervalsTest.cs" />
