@@ -22,23 +22,29 @@ namespace Methods.Tests.Tests
         {
             TestDataList = new List<CoinChange2TestData>
             {
+                //new CoinChange2TestData
+                //{
+                //    InputArray = new[] {1, 2, 5},
+                //    InputInt = 5,
+                //    OutputInt = 4
+                //},
+                //new CoinChange2TestData
+                //{
+                //    InputArray = new[] {2},
+                //    InputInt = 3,
+                //    OutputInt = 0
+                //},
+                //new CoinChange2TestData
+                //{
+                //    InputArray = new[] {10},
+                //    InputInt = 10,
+                //    OutputInt = 1
+                //},
                 new CoinChange2TestData
                 {
-                    InputArray = new[] {1, 2, 5},
-                    InputInt = 5,
-                    OutputInt = 4
-                },
-                new CoinChange2TestData
-                {
-                    InputArray = new[] {2},
-                    InputInt = 3,
-                    OutputInt = 0
-                },
-                new CoinChange2TestData
-                {
-                    InputArray = new[] {10},
-                    InputInt = 10,
-                    OutputInt = 1
+                    InputArray = new[] {2, 1},
+                    InputInt = 4,
+                    OutputInt = 3
                 }
             };
         }
@@ -47,7 +53,7 @@ namespace Methods.Tests.Tests
         /// Test method to verify if the method works
         /// </summary>
         [TestMethod]
-        public void MaxSubArrayTest()
+        public void coinChange2Test()
         {
             foreach (CoinChange2TestData testData in TestDataList)
             {

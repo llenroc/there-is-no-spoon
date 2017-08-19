@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MethodsLibrary.Methods
 {
@@ -10,17 +7,36 @@ namespace MethodsLibrary.Methods
     {
         public static int Change(int amount, int[] coins)
         {
-            int result = 0;
-
+            if ((coins.Length <= 0) || (coins == null))
+            {
+                return 0;
+            }
             int[] combination = new int[coins.Length];
-            
-
-            return result;
+            List<int[]> combinations = new List<int[]>();
+            huaqian(amount, coins, amount, combination, combinations);
+            return combinations.Count;
         }
 
-        public static void huaqian(int amount, int[] coins, int sum, int n)
+        public static void huaqian(int amount, int[] coins, int sum, int[] combination, List<int[]> combinations)
         {
+            if (sum < 0)
+            {
+                return;
+            }
+            if (sum == 0)
+            {
+                combinations.Add(combination);
+                return;
+            }
 
+            for (int i = 0; i < coins.Length; i++)
+            {
+                combination[i]++;
+                sum = sum - coins[i];
+                huaqian(amount, coins, sum, combination, combinations);
+                combination[i]--;
+                sum = sum + coins[i];
+            }
         }
     }
 }
