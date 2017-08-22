@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MethodsLibrary.Methods
 {
@@ -9,15 +10,21 @@ namespace MethodsLibrary.Methods
         {
             if ((coins.Length <= 0) || (coins == null))
             {
-                return 0;
+                if(amount == 0) return 1;
+                else return 0;
             }
+            Array.Sort(coins);
             int[] combination = new int[coins.Length];
-            List<int[]> combinations = new List<int[]>();
+            IList<int[]> combinations = new List<int[]>();
             huaqian(amount, coins, amount, combination, combinations);
+            //foreach(var combo in combinations)
+            //{
+            //    Console.WriteLine("final combos: " + string.Join(",", combo));
+            //}
             return combinations.Count;
         }
 
-        public static void huaqian(int amount, int[] coins, int sum, int[] combination, List<int[]> combinations)
+        public static void huaqian(int amount, int[] coins, int sum, int[] combination, IList<int[]> combinations)
         {
             if (sum < 0)
             {
@@ -25,18 +32,35 @@ namespace MethodsLibrary.Methods
             }
             if (sum == 0)
             {
-                combinations.Add(combination);
+                if(!hasCombo(combinations, combination))
+                {
+                    combinations.Add(combination.ToArray());
+                }                
                 return;
             }
 
-            for (int i = 0; i < coins.Length; i++)
+            for (int i = coins.Length-1; i >= 0; i--)
             {
                 combination[i]++;
-                sum = sum - coins[i];
+                sum = sum - coins[i];                
                 huaqian(amount, coins, sum, combination, combinations);
                 combination[i]--;
                 sum = sum + coins[i];
             }
+        }
+
+        private static bool hasCombo(IList<int[]> combinations, int[] combination)
+        {
+            bool isEqual = false;
+            foreach (var combo in combinations)
+            {
+                isEqual = Enumerable.SequenceEqual(combo, combination);
+                if (isEqual)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

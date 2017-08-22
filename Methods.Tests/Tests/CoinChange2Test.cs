@@ -22,30 +22,49 @@ namespace Methods.Tests.Tests
         {
             TestDataList = new List<CoinChange2TestData>
             {
-                //new CoinChange2TestData
-                //{
-                //    InputArray = new[] {1, 2, 5},
-                //    InputInt = 5,
-                //    OutputInt = 4
-                //},
-                //new CoinChange2TestData
-                //{
-                //    InputArray = new[] {2},
-                //    InputInt = 3,
-                //    OutputInt = 0
-                //},
-                //new CoinChange2TestData
-                //{
-                //    InputArray = new[] {10},
-                //    InputInt = 10,
-                //    OutputInt = 1
-                //},
+                new CoinChange2TestData
+                {
+                    InputArray = new[] {1, 2, 5},
+                    InputInt = 5,
+                    OutputInt = 4
+                },
+                new CoinChange2TestData
+                {
+                    InputArray = new[] {2},
+                    InputInt = 3,
+                    OutputInt = 0
+                },
+                new CoinChange2TestData
+                {
+                    InputArray = new[] {10},
+                    InputInt = 10,
+                    OutputInt = 1
+                },
                 new CoinChange2TestData
                 {
                     InputArray = new[] {2, 1},
                     InputInt = 4,
                     OutputInt = 3
+                },
+                new CoinChange2TestData
+                {
+                    InputArray = new int[] { },
+                    InputInt = 0,
+                    OutputInt = 1
+                },
+                new CoinChange2TestData
+                {
+                    InputArray = new int[] { },
+                    InputInt = 7,
+                    OutputInt = 0
                 }
+                ,
+                new CoinChange2TestData
+                {
+                    InputArray = new[] {1, 2, 5},
+                    InputInt = 500,
+                    OutputInt = 12701
+                },
             };
         }
 
@@ -58,7 +77,7 @@ namespace Methods.Tests.Tests
             foreach (CoinChange2TestData testData in TestDataList)
             {
                 Console.WriteLine("Test iutput: " + string.Join(",", testData.InputArray));
-
+                
                 Assert.AreEqual(testData.OutputInt, CoinChange2.Change(testData.InputInt, testData.InputArray));
             }
         }
