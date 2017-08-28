@@ -72,6 +72,7 @@
     <Compile Include="Objects\ThreeSumTestData.cs" />
     <Compile Include="Objects\TwoSumTestData.cs" />
     <Compile Include="Objects\ValidPerfectSquareTestData.cs" />
+    <Compile Include="Objects\ValidSudokuTestData.cs" />
     <Compile Include="Objects\Verification.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Tests\TwoSumTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ValidPerfectSquareTest.cs" />
+    <Compile Include="Tests\ValidSudokuTest.cs" />
     <Compile Include="TryItHere.cs" />
   </ItemGroup>
   <ItemGroup>
