@@ -74,6 +74,7 @@
     <Compile Include="Methods\SearchA2DMatrix.cs" />
     <Compile Include="Methods\SearchInRotatedSortedArray.cs" />
     <Compile Include="Methods\SlidingWindowMaximum.cs" />
+    <Compile Include="Methods\SudokuSolver.cs" />
     <Compile Include="Methods\ThreeSum.cs" />
     <Compile Include="Methods\TrappingRainWater.cs" />
     <Compile Include="Methods\ValidateBinarySearchTree.cs" />
