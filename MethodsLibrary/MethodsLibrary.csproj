@@ -80,6 +80,7 @@
     <Compile Include="Methods\ValidateBinarySearchTree.cs" />
     <Compile Include="Methods\ValidPerfectSquare.cs" />
     <Compile Include="Methods\ValidSudoku.cs" />
+    <Compile Include="Methods\WordSearch.cs" />
     <Compile Include="Objects\Interval.cs" />
     <Compile Include="Objects\ListNode.cs" />
     <Compile Include="Methods\TwoSum.cs" />

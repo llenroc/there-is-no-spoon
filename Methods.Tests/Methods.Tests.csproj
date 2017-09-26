@@ -61,6 +61,7 @@
     <Compile Include="Objects\PermutationsTestData.cs" />
     <Compile Include="Objects\NQueensTestData.cs" />
     <Compile Include="Objects\RangeSumQuery2DTestData.cs" />
+    <Compile Include="Objects\WordSearchTestData.cs" />
     <Compile Include="Objects\SearchA2DMatrixTestData.cs" />
     <Compile Include="Objects\SearchInRotatedSortedArrayTestData.cs" />
     <Compile Include="Objects\MaximumSubarrayTestData.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
     <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\RangeSumQuery2DTest.cs" />
+    <Compile Include="Tests\WordSearchTest.cs" />
     <Compile Include="Tests\SearchA2DMatrixTest.cs" />
     <Compile Include="Tests\SearchInRotatedSortedArrayTest.cs" />
     <Compile Include="Tests\MaxProfitIITest.cs" />
