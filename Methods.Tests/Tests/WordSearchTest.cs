@@ -62,12 +62,13 @@ namespace Methods.Tests.Tests
         /// Test method to verify if the method works
         /// </summary>
         [TestMethod]
-        public void searchA2DMatrixTest()
+        public void wordSearchTest()
         {
             foreach (WordSearchTestData testData in TestDataList)
             {
                 Console.WriteLine("Test input matrix: ");
                 char[,] matrix = testData.Board;
+
                 for (int i = 0; i <= matrix.GetUpperBound(0); i++)
                 {
                     for (int j = 0; j <= matrix.GetUpperBound(1); j++)
