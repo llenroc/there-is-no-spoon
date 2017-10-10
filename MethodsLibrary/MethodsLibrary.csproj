@@ -70,6 +70,7 @@
     <Compile Include="Methods\Permutations.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedList.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedListII.cs" />
+    <Compile Include="Methods\ReverseLinkedList.cs" />
     <Compile Include="Methods\ReverseWordsInAString.cs" />
     <Compile Include="Methods\SearchA2DMatrix.cs" />
     <Compile Include="Methods\SearchInRotatedSortedArray.cs" />

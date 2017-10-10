@@ -89,6 +89,7 @@
     <Compile Include="Tests\LengthOfLongestSubstringTest.cs" />
     <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\RangeSumQuery2DTest.cs" />
+    <Compile Include="Tests\ReverseListTest.cs" />
     <Compile Include="Tests\WordSearchTest.cs" />
     <Compile Include="Tests\SearchA2DMatrixTest.cs" />
     <Compile Include="Tests\SearchInRotatedSortedArrayTest.cs" />
