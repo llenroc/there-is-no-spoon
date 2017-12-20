@@ -70,6 +70,7 @@
     <Compile Include="Methods\Permutations.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedList.cs" />
     <Compile Include="Methods\RemoveDuplicatesFromSortedListII.cs" />
+    <Compile Include="Methods\ReverseLinkedList.cs" />
     <Compile Include="Methods\ReverseWordsInAString.cs" />
     <Compile Include="Methods\SearchA2DMatrix.cs" />
     <Compile Include="Methods\SearchInRotatedSortedArray.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Methods\ThreeSum.cs" />
     <Compile Include="Methods\TrappingRainWater.cs" />
     <Compile Include="Methods\ValidateBinarySearchTree.cs" />
+    <Compile Include="Methods\ValidPalindrome.cs" />
     <Compile Include="Methods\ValidPerfectSquare.cs" />
     <Compile Include="Methods\ValidSudoku.cs" />
     <Compile Include="Methods\WordSearch.cs" />

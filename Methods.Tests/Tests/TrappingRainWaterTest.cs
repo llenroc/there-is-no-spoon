@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Methods.Tests.Objects;
 using MethodsLibrary.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MethodsLibrary.Methods;
 
 namespace Methods.Tests.Tests
 {
