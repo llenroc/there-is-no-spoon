@@ -77,6 +77,8 @@ namespace Methods.Tests.Tests
                     }
                     Console.WriteLine();
                 }
+                Console.WriteLine("Test input word: " + testData.Word);
+
                 bool result = WordSearch.Exist(testData.Board, testData.Word);
                 Console.WriteLine("Expected output: " + testData.Result);
                 Console.WriteLine("Actual output1: " + result);

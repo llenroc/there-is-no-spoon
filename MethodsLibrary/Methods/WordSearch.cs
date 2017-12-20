@@ -1,40 +1,65 @@
-﻿
-namespace MethodsLibrary.Methods
+﻿namespace MethodsLibrary.Methods
 {
+    using System;
+
     public class WordSearch
     {
         public static bool Exist(char[,] board, string word)
         {
-
-
-
-
-            return isExist(0, 0, 0, board, word);
-        }
-
-        public static bool isExist(int row, int column, int index, char[,] board, string word)
-        {
-            if (index == word.Length - 1)
-            {
-                return true;
-            }
             int rows = board.GetUpperBound(0);
             int columns = board.GetUpperBound(1);
-            if (row < 0 || row >= rows || column < 0 || column >= columns)
+            int index = 0;
+            bool isExisted = false;
+            for (int row = 0; row < rows; row++)
+            {
+                for (int column = 0; column < columns; column++)
+                {
+                    if (isExisted) return true;
+
+                    if (word[index] == board[row, column])
+                    {
+                        isExisted = IsExist(row, column, 0, rows, columns, board, word);
+                    }
+                }
+            }
+
+            return isExisted;
+        }
+
+        public static bool IsExist(int row, int column, int rows, int columns, int index, char[,] board, string word)
+        {
+            Console.Write(board[row,column]);
+            if ((word[index] != board[row, column]) || (row < 0) || (row >= rows) || (column < 0) ||
+                (column >= columns))
             {
                 return false;
             }
-            for (int i = 0; i < word.Length; i++)
+
+            if (index == (word.Length - 1))
             {
-                if (word[i] == board[row, column])
-                {
-                    isExist(row - 1, column, i, board, word);
-                    isExist(row + 1, column, i, board, word);
-                    isExist(row, column - 1, i, board, word);
-                    isExist(row, column + 1, i, board, word);
-                }
+                return true;
             }
-            return false;
+
+            //for (int i = row; i < rows; i++)
+            //{
+            //    for (int j = column; j < columns; j++)
+            //    {
+            //        if (word[index] == board[i, j])
+            //        {
+            //            return IsExist(row - 1, column, index + 1, rows, columns, board, word) ||
+            //                   IsExist(row + 1, column, index + 1, rows, columns, board, word) ||
+            //                   IsExist(row, column - 1, index + 1, rows, columns, board, word) ||
+            //                   IsExist(row, column + 1, index + 1, rows, columns, board, word);
+            //        }
+            //    }
+            //}
+
+            //return false;
+
+            return IsExist(row, column - 1, index + 1, rows, columns, board, word) ||
+                   IsExist(row - 1, column, index + 1, rows, columns, board, word) ||
+                   IsExist(row, column + 1, index + 1, rows, columns, board, word) ||
+                   IsExist(row + 1, column, index + 1, rows, columns, board, word);
         }
     }
 }
