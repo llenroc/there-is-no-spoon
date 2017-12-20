@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
     <Compile Include="Objects\CoinChange2TestData.cs" />
+    <Compile Include="Objects\ValidPalindromeTestData.cs" />
     <Compile Include="Objects\LengthOfLongestSubstringTestData.cs" />
     <Compile Include="Objects\LongestConsecutiveSequenceTestData.cs" />
     <Compile Include="Objects\LongestPalindromeTestData.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\RangeSumQuery2DTest.cs" />
     <Compile Include="Tests\ReverseListTest.cs" />
+    <Compile Include="Tests\ValidPalindromeTest.cs" />
     <Compile Include="Tests\WordSearchTest.cs" />
     <Compile Include="Tests\SearchA2DMatrixTest.cs" />
     <Compile Include="Tests\SearchInRotatedSortedArrayTest.cs" />
