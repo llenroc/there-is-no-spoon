@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
-using Methods.Tests.Objects;
-using MethodsLibrary.Methods;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Methods.Tests.Tests
+﻿namespace Methods.Tests.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using MethodsLibrary.Methods;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Objects;
+
     [TestClass]
-    class ValidPalindromeTest
+    public class ValidPalindromeTest
     {
         /// <summary>
         /// List to store test data set
@@ -30,6 +31,46 @@ namespace Methods.Tests.Tests
                 {
                     InputString = "race a car",
                     OutputBool = false
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = ",.",
+                    OutputBool = true
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = "      ",
+                    OutputBool = true
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = ",  ,",
+                    OutputBool = true
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = "  ,  ",
+                    OutputBool = true
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = "  3  ",
+                    OutputBool = true
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = "23.4,32",
+                    OutputBool = true
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = "123",
+                    OutputBool = false
+                },
+                new ValidPalindromeTestData
+                {
+                    InputString = "abc",
+                    OutputBool = false
                 }
             };
         }
@@ -42,9 +83,11 @@ namespace Methods.Tests.Tests
         {
             foreach (ValidPalindromeTestData testData in TestDataList)
             {
-                System.Console.WriteLine("Input String:" + testData.InputString);
-                Assert.AreEqual(ValidPalindrome.IsPalindrome(testData.InputString),
-                                testData.OutputBool, "Failed on the case: " + testData.InputString);
+                Console.WriteLine("Input String:" + testData.InputString);
+                var result = ValidPalindrome.IsPalindrome(testData.InputString);
+                Console.WriteLine("Result: " + result);
+                Assert.AreEqual(testData.OutputBool, result,
+                                "Failed on the case: " + testData.InputString);
             }
         }
     }
