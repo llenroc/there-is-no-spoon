@@ -17,6 +17,8 @@ namespace MethodsLibrary.Methods
             {
                 return 0;
             }
+            // This is more like a bottom to top approach.
+
             // Devide the problem to left and right tree
             // and find the depth of each tree
             int left = MaxDepth(root.left);
@@ -26,7 +28,7 @@ namespace MethodsLibrary.Methods
             return Math.Max(left, right) + 1;
         }
 
-        private static int depth;
+
         /// <summary>
         /// Recursive traversal to find the maximum depth of the tree
         /// </summary>
@@ -34,23 +36,28 @@ namespace MethodsLibrary.Methods
         /// <returns> The maximum depth of the tree </returns>
         public static int maxDepth(TreeNode root)
         {
-            depth = 0;
-            helper(root, 1);
-            return depth;
+            if(root == null)
+            {
+                return 0;
+            }
+            
+            // This is a top to bottom approach. More intuitive I think.
+            return FindingMax(root, 1, 0);
         }
-        
-        private static void helper(TreeNode node, int curtDepth)
+
+        private static int FindingMax(TreeNode root, int level, int max)
         {
-            if (node == null)
+            if (root == null)
             {
-                return;
+                return max;
             }
-            if (curtDepth > depth)
+            if (level >= max)
             {
-                depth = curtDepth;
+                max = level;
             }
-            helper(node.left, curtDepth + 1);
-            helper(node.right, curtDepth + 1);
+            max = FindingMax(root.left, level + 1, max);
+            max = FindingMax(root.right, level + 1, max);
+            return max;
         }
     }
 }

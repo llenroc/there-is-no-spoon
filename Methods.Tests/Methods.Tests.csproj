@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
     <Compile Include="Objects\AddTwoNumbersTestData.cs" />
     <Compile Include="Objects\CoinChange2TestData.cs" />
     <Compile Include="Objects\ValidPalindromeTestData.cs" />
@@ -76,12 +77,18 @@
     <Compile Include="Objects\ValidPerfectSquareTestData.cs" />
     <Compile Include="Objects\ValidSudokuTestData.cs" />
     <Compile Include="Objects\Verification.cs" />
+    <Compile Include="PlayGround.cs" />
+    <Compile Include="TestClass.cs" />
     <Compile Include="Tests\AddTwoNumbersTest.cs" />
+    <Compile Include="Tests\AllElementsInTwoBinarySearchTreesTest.cs" />
+    <Compile Include="Tests\BinaryTreeLevelOrderTraversalIITest.cs" />
     <Compile Include="Tests\BinaryTreeLevelOrderTraversalTest.cs" />
     <Compile Include="Tests\CoinChange2Test.cs" />
     <Compile Include="Tests\LetterCombinationsOfAPhoneNumberTest.cs" />
     <Compile Include="Tests\LongestConsecutiveSequenceTest.cs" />
     <Compile Include="Tests\MergeIntervalsTest.cs" />
+    <Compile Include="Tests\NumberOfIslandsTest.cs" />
+    <Compile Include="Tests\NumberOfStepsToZeroTest.cs" />
     <Compile Include="Tests\PermutationsTest.cs" />
     <Compile Include="Tests\NQueensTest.cs" />
     <Compile Include="Tests\MaximumDepthofBinaryTreeTest.cs" />
@@ -91,6 +98,7 @@
     <Compile Include="Tests\LongestPalindromeTest.cs" />
     <Compile Include="Tests\RangeSumQuery2DTest.cs" />
     <Compile Include="Tests\ReverseListTest.cs" />
+    <Compile Include="Tests\ValidateBinarySearchTreeTest.cs" />
     <Compile Include="Tests\ValidPalindromeTest.cs" />
     <Compile Include="Tests\WordSearchTest.cs" />
     <Compile Include="Tests\SearchA2DMatrixTest.cs" />
